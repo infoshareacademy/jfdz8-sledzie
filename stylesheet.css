@@ -1,3 +1,62 @@
+.enroll_form {
+    background-color: #f2f2f2;
+    text-align: center;
+    height: 350px;
+}
+
+.enroll_info {
+    text-align: center;
+    width: 100%;
+    height: 300px;
+}
+
+.enroll_icon {
+    width: 150px;
+    height: 150px;
+
+}
+
+.enroll_info h1 {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.enroll_info h2 {
+    font-size: 23px;
+}
+
+.enroll_info h1, h2 {
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 10px;
+}
+
+.user_email {
+    width: 400px;
+    height: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: center;
+    border: 2px solid black;
+
+}
+
+.send_button {
+    width: 60px;
+    height: 35px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: darkgrey;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+
 .team_profiles {
     display: flex;
     flex-direction: row;
@@ -16,6 +75,7 @@
     text-align: center;
     font-size: 40px;
     padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .team_member {
@@ -30,14 +90,14 @@
 
 }
 
-h2 {
+.names {
     position: relative;
     text-align: center;
     font-family: 'Lato', sans-serif;
     line-height: 1.4em;
 }
 
-h2::before {
+.names::before {
     content: '';
     position: absolute;
     width: 0;
@@ -49,11 +109,10 @@ h2::before {
     transition: 300ms width;
 }
 
-h2:hover::before {
+.names:hover::before {
     width: 100%;
 
 }
-
 
 
 .team_member_description {
