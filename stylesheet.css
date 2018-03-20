@@ -1,7 +1,7 @@
-.enroll_form {
+.enroll_section {
     background-color: #f2f2f2;
     text-align: center;
-    height: 350px;
+    height: 400px;
 }
 
 .enroll_info {
@@ -30,32 +30,44 @@
     padding-bottom: 10px;
 }
 
-.user_email {
-    width: 400px;
-    height: 30px;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    text-align: center;
-    border: 2px solid black;
-
+.enroll_form {
+    display: inline-table;
 }
 
-.send_button {
-    width: 60px;
-    height: 35px;
-    border-top-right-radius: 30px;
+.user_email {
+
+    width: 400px;
+    height: 30px;
+    border-top-right-radius: 0px;
     border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 0px;
     border-bottom-left-radius: 30px;
+    text-align: center;
+    border:1px solid black;
+    border-right: 0;
+}
+
+button {
+    width: 80px;
+    height: 34px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 0px;
     text-align: center;
     border: 2px solid black;
     background-color: darkgrey;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
+    border:1px solid black;
+    border-left: 0;
+    margin-left: 0;
+
 }
 
+button:hover {
+    opacity: 0.7;
+}
 
 .team_profiles {
     display: flex;
@@ -75,7 +87,7 @@
     text-align: center;
     font-size: 40px;
     padding-bottom: 40px;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .team_member {
