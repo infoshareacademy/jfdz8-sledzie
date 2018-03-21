@@ -31,41 +31,39 @@
 }
 
 .enroll_form {
-    display: inline-table;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .user_email {
-
     width: 400px;
-    height: 30px;
     border-top-right-radius: 0px;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 30px;
     text-align: center;
-    border:1px solid black;
+    border: 1px solid black;
     border-right: 0;
 }
 
-button {
-    width: 80px;
-    height: 34px;
+.button {
+    width: 100px;
     border-top-right-radius: 30px;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 0px;
     text-align: center;
-    border: 2px solid black;
     background-color: darkgrey;
     font-family: 'Lato', sans-serif;
     font-weight: bolder;
-    border:1px solid black;
+    border: 1px solid black;
     border-left: 0;
-    margin-left: 0;
-
 }
 
-button:hover {
+.button:hover {
     opacity: 0.7;
 }
 
@@ -91,7 +89,7 @@ button:hover {
 }
 
 .team_member {
-    width: 200px;
+    width: 350px;
     text-align: center;
 }
 
@@ -99,6 +97,7 @@ button:hover {
     border-radius: 150px;
     width: 100px;
     height: 100px;
+    text-align: center;
 
 }
 
@@ -122,16 +121,14 @@ button:hover {
 }
 
 .names:hover::before {
-    width: 100%;
+    width: 50%;
 
 }
 
-
 .team_member_description {
-    max-width: auto;
+    width: 350px;
     word-wrap: break-word;
     text-align: center;
-
 }
 
 .footer {
