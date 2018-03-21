@@ -141,4 +141,5 @@ header img {
     .nav-items-list li:hover a{
         color: #fff;
         transition: 0.5s ease-in;
+    }
 }
