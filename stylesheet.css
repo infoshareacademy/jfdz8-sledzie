@@ -1,3 +1,7 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
 .enroll_section {
     background-color: #f2f2f2;
     text-align: center;
@@ -26,7 +30,6 @@
 }
 
 .enroll_info h1, h2 {
-    font-family: 'Lato', sans-serif;
     padding-bottom: 10px;
 }
 
@@ -57,7 +60,6 @@
     border-bottom-left-radius: 0px;
     text-align: center;
     background-color: darkgrey;
-    font-family: 'Lato', sans-serif;
     font-weight: bolder;
     border: 1px solid black;
     border-left: 0;
@@ -67,13 +69,7 @@
     opacity: 0.7;
 }
 
-.team_profiles {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-}
+/* TEAM */
 
 .team {
     background-color: white;
@@ -81,11 +77,26 @@
     font-family: 'Lato', sans-serif;
 }
 
+.data_security_info {
+    text-align: center;
+    font-size: 9px;
+    font-style: italic;
+    padding-top: 5px;
+}
+
 .team h1{
     text-align: center;
     font-size: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-top: 30px;
+}
+
+.team_profiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 
 .team_member {
@@ -104,7 +115,6 @@
 .names {
     position: relative;
     text-align: center;
-    font-family: 'Lato', sans-serif;
     line-height: 1.4em;
 }
 
@@ -147,7 +157,6 @@
 }
 
 .caption {
-    font-family: 'Lato', sans-serif;
     font-size: 11px;
     color: white;
 }
