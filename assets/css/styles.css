@@ -13,7 +13,7 @@ body {
     width: 100vw;
     height: 2000px;
 }
-.desktop-navigation {
+.navigation {
     width: 100vw;
     height: 6rem;
     position: fixed;
@@ -21,23 +21,21 @@ body {
     top: 0;
     left: 0;
 }
-.desktop-navigation:hover {
+.navigation:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
-.main-logo {
-    display: inline-block;
+.logo {
     height: 6rem;
     margin-right: 4rem;
     padding: 1rem 2rem;
     float: left;
 }
-.main-logo:hover {
+.logo:hover {
     background-color: #fff;
     transition: 0.5s ease-in;
 }
 .navigation-items-list li {
-    display: inline-block;
-    clear: both;
+    float: left;
     cursor: pointer;
 }
 .navigation-items-list li:hover {
@@ -45,7 +43,7 @@ body {
     transition: 0.5s ease-in;
 }
 .navigation-item {
-    display: inline-block;
+    display: block;
     padding: 2.15rem 2rem;
     color: #000;
     font-size: 1.4rem;
@@ -99,8 +97,14 @@ body {
 .navigation-scroll {
     background-color: rgb(229, 11, 20);
 }
-
-
+.clearfix::after {
+    display: block;
+    content:'';
+    clear: both;
+}
+.navigation-items-list.navigation-expanded {
+    display: block;
+}
 .background-test {
     width: 100vw;
 }
@@ -111,20 +115,25 @@ body {
 
 @media (max-width: 960px) {
     .navigation-items-list {
+        position: fixed;
+        top: 6rem;
+        width: 100vw;
         display: none;
+    }
+    .navigation-items-list li {
+        background-color: #fff;
+        float: none;
+    }
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     .hamburger {
         display: block;
     }
     .cross {
         display: none;
-    }
-    .navigation-items-list li {
-        background-color: #fff;
-        display: block;
-    }
-    .navigation-item {
-        display: block;
     }
     .navigation-item:hover {
          background-color: rgb(229, 11, 20);
