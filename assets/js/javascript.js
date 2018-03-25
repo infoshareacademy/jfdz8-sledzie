@@ -1,6 +1,6 @@
 function handleNavigationEffect() {
     const scrollThreshold = 50;
-    const $navigation = $('.desktop-navigation');
+    const $navigation = $('.navigation');
 
     $(this).scrollTop() > scrollThreshold ?
         $navigation.addClass('navigation-scroll') :
@@ -9,23 +9,41 @@ function handleNavigationEffect() {
 
 $(window).on('scroll', handleNavigationEffect);
 
-$( ".hamburger" ).click(function() {
-    $( ".hamburger" ).hide();
-    $( ".navigation-items-list" ).slideToggle( "slow", function() {
-        $( ".cross" ).show();
-    });
+var handlersAreSet = false;
+
+var setHandlers = function() {
+    if ($(window).width() < 961) {
+        $(".hamburger").click(function () {
+            $('.navigation-items-list').slideToggle().addClass('navigation-expanded');
+            $(".hamburger").hide();
+            $(".cross").show();
+        });
+
+        $(".cross").click(function () {
+            $('.navigation-items-list').slideUp().removeClass('navigation-expanded');
+            $(".cross").hide();
+            $(".hamburger").show();
+        });
+
+        $('.navigation-items-list li').click(function () {
+            if ($(window).width() < 961) {
+                $('.navigation-items-list').slideUp().removeClass('navigation-expanded');
+                $(".cross").hide();
+                $(".hamburger").show();
+            };
+        });
+        handlersAreSet = true;
+    }
+};
+
+$(window).resize(function() {
+    if (handlersAreSet === false) {
+        setHandlers();
+    }
+
+    if ($(window).width() > 960) {
+        $(".navigation-items-list").show().unbind('click');
+    }
 });
 
-$( ".cross" ).click(function() {
-    $( ".cross" ).hide();
-    $( ".navigation-items-list" ).slideToggle( "slow", function() {
-        $( ".hamburger" ).show();
-    });
-});
-
-$( ".navigation-items-list" ).click(function() {
-    $( ".cross" ).hide();
-    $( ".navigation-items-list" ).slideToggle( "slow", function() {
-        $( ".hamburger" ).show();
-    });
-});
+setHandlers();
