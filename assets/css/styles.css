@@ -141,6 +141,7 @@ header img {
 .section-container {
     margin: 0 auto;
     width: 900px;
+    text-align: center;
 
 }
 
@@ -156,11 +157,14 @@ header img {
 
 #details h1 {
     text-align: center;
-    color:white;
+    color:black;
     background-color: red;
     font-weight: bold;
     text-transform: uppercase;
     font-family:Lato, sans-serif;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }
 
