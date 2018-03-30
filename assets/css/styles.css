@@ -6,14 +6,16 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    border: none;
-    border-radius: 0;
+    /*border: 1px solid red;*/
 }
 body {
     width: 100vw;
     background-color: #f0f0f0;
     height: 2000px;
 }
+
+/* NAVIGATION*/
+
 .navigation {
     width: 100vw;
     height: 6rem;
@@ -110,10 +112,6 @@ body {
     width: 100vw;
 }
 
-
-
-
-
 @media (max-width: 960px) {
     .navigation-items-list {
         position: fixed;
@@ -145,6 +143,7 @@ body {
     }
 }
 
+/* FUNKCJONALNOŚĆ */
 
 .section-container {
     margin: 0 auto;
@@ -191,37 +190,93 @@ body {
     text-align: justify;
 }
 
-.enroll_section {
+/*FUNCTIONS*/
+
+.functions {
+    background-color: #ffffff;
+    padding-bottom: 70px;
+    padding-top: 20px;
+}
+
+.functions h2{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+.functions-container {
+    display: inline-block;
+    width: 70%;
+    transform: translate(25%, 0);
+    padding-top: 20px;
+}
+
+.functions-container-feature {
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+
+}
+
+.functions-container-feature-icon {
+    width: 70px;
+    float: left;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: #FF0013;
+}
+
+.functions-container_feature-description {
+    width: calc(100% - 70px);
+    float: left;
+}
+
+.functions-container_feature-description h3 {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.functions-container_feature-description p {
+    padding-bottom: 15px;
+    font-size: 17px;
+}
+
+/*ENROLL SECTION*/
+
+.enroll {
     background-color: #f2f2f2;
     text-align: center;
     height: 400px;
+    margin-top: 20px;
 }
 
-.enroll_info {
+.enroll-info {
     text-align: center;
     width: 100%;
     height: 270px;
 }
 
-.enroll_icon {
+.enroll-info-icon {
     width: 150px;
     height: 150px;
-}
+    }
 
-.enroll_info h1 {
+.enroll-info h1 {
     font-size: 25px;
     margin-top: 5px;
 }
 
-.enroll_info h2 {
+.enroll-info h2 {
     font-size: 23px;
 }
 
-.enroll_info h1, h2 {
+.enroll-info h1, h2 {
     padding-bottom: 10px;
 }
 
-.enroll_form {
+.enroll-form {
     width: 100%;
     height: 30px;
     display: flex;
@@ -229,26 +284,20 @@ body {
     justify-content: center;
 }
 
-.user_email {
+.enroll-form-user_email {
     width: 600px;
     height: 40px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 30px;
+    border-radius: 30px 0 0 30px;
     text-align: center;
     border: 1px solid black;
     border-right: 0;
     font-size: 15px;
 }
 
-.button {
+.enroll-form-button {
     width: 100px;
     height: 40px;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 0px;
+    border-radius: 0 30px 30px 0;
     text-align: center;
     background-color: darkgrey;
     font-weight: bolder;
@@ -257,52 +306,54 @@ body {
     border-left: 0;
 }
 
-.button:hover {
+.enroll-form-button:hover {
     opacity: 0.7;
 }
 
-/* TEAM */
-
-.team {
-    background-color: white;
-    padding-bottom: 20px;
-    font-family: 'Lato', sans-serif;
-}
-
-.data_security_info {
+.enroll-data_security_info {
     text-align: center;
     font-size: 12px;
     font-style: italic;
     padding-top: 20px;
 }
 
+/* TEAM */
+
+.team {
+    background-color: white;
+    padding-bottom: 60px;
+    padding-top: 20px;
+}
+
 .team h1{
     text-align: center;
     font-size: 40px;
-    padding-bottom: 20px;
-    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 
-.team_profiles {
+.team-profiles {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 90%;
+   margin: 0 auto;
 }
 
-.team_member {
+.team-profiles-member {
     width: 350px;
     text-align: center;
 }
 
-.team_member_photo img {
+.team-profiles-member-photo img {
     border-radius: 150px;
     width: 100px;
     height: 100px;
     text-align: center;
 }
 
-.names {
+.team-profiles-member-name {
     position: relative;
     text-align: center;
     line-height: 1.4em;
@@ -310,7 +361,7 @@ body {
     padding-top: 5px;
 }
 
-.names::before {
+.team-profiles-member-name::before {
     content: '';
     position: absolute;
     width: 0;
@@ -322,18 +373,17 @@ body {
     transition: 300ms width;
 }
 
-.names:hover::before {
+.team-profiles-member-name:hover::before {
     width: 50%;
-
 }
 
-.team_member_description {
-    width: 350px;
-    word-wrap: break-word;
+.team-profiles-member-description {
     text-align: center;
     font-size: 18px;
     padding-top: 7px;
 }
+
+/* FOOTER */
 
 .footer {
     padding-top: 30px;
