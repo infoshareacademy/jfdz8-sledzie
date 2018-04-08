@@ -374,8 +374,14 @@ h1{
 }
 
 .social__icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+
+.social__icon:hover {
+    opacity: 0.5;
+    transition: 0.5s ease-in;
 }
 
 /* FOOTER */
