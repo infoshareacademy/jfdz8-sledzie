@@ -6,7 +6,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    /*border: 1px solid red;*/
 }
 body {
     width: 100vw;
@@ -15,7 +14,9 @@ body {
 }
 
 /* NAVIGATION*/
-
+.container {
+    width: 100vw;
+}
 .navigation {
     width: 100vw;
     height: 6rem;
@@ -147,13 +148,12 @@ body {
 
 .section-container {
     margin: 0 auto;
-    width: 900px;
+    width: 90%;
     text-align: center;
 
 }
 
 #details {
-    width: 900px;
     color: whitesmoke;
     background-color: midnightblue;
     font-family:Lato, sans-serif;
