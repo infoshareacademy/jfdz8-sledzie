@@ -6,15 +6,18 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    border: none;
-    border-radius: 0;
 }
 body {
     width: 100vw;
     background-color: #f0f0f0;
     height: 2000px;
 }
-.desktop-navigation {
+
+/* NAVIGATION*/
+.container {
+    width: 100vw;
+}
+.navigation {
     width: 100vw;
     height: 6rem;
     position: fixed;
@@ -22,23 +25,21 @@ body {
     top: 0;
     left: 0;
 }
-.desktop-navigation:hover {
+.navigation:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
-.main-logo {
+.logo {
     height: 6rem;
     margin-right: 4rem;
     padding: 1rem 2rem;
     float: left;
 }
-.main-logo:hover {
+.logo:hover {
     background-color: #fff;
     transition: 0.5s ease-in;
 }
 .navigation-items-list li {
-    display: inline-block;
-    height: 6rem;
-    clear: both;
+    float: left;
     cursor: pointer;
 }
 .navigation-items-list li:hover {
@@ -46,87 +47,93 @@ body {
     transition: 0.5s ease-in;
 }
 .navigation-item {
-    display: inline-block;
-    padding: 2.3rem 2rem;
+    display: block;
+    padding: 2.15rem 2rem;
     color: #000;
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: lighter;
 }
-.navigation-items-list li:hover a{
+.navigation-item:hover {
     color: #ff0000;
+    transition: 0.5s ease-in;
+}
+.hamburger {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 3rem;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    width: 8rem;
+    padding: 1rem 3rem;
+    height: 6rem;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+}
+.hamburger:hover {
+    color: #fff;
+    transition: 0.5s ease-in;
+}
+.cross {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 3rem;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    width: 8rem;
+    padding: 1.3rem 3.2rem;
+    height: 6rem;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+}
+.cross:hover {
+    color: #fff;
     transition: 0.5s ease-in;
 }
 .navigation-scroll {
     background-color: rgb(229, 11, 20);
+}
+.clearfix::after {
+    display: block;
+    content:'';
+    clear: both;
+}
+.navigation-items-list.navigation-expanded {
+    display: block;
+}
+.background-test {
     width: 100vw;
-    height: 6rem;
-    position: fixed;
-    z-index: 4;
-    top: 0;
-    left: 0;
-}
-.rwd-navigation {
-    display: none;
 }
 
-
-
-header img {
-    width: 100vw;
-    height: auto;
-}
-
-
-
-@media (max-width: 961px) {
-    .main-logo {
-        float: none;
-    }
-    .rwd-navigation {
-        display: block;
-        width: 8rem;
-        padding: 1rem 3rem;
-        height: 6rem;
+@media (max-width: 960px) {
+    .navigation-items-list {
         position: fixed;
-        z-index: 5;
-        top: 0;
-        right: 0;
-    }
-    .hamburger {
-        color: #000;
-        background-color: rgba(0, 0, 0, 0);
-        font-size: 3rem;
-        border: 0;
-        cursor: pointer;
-        outline: none;
-    }
-    .hamburger:hover {
-        color: #fff;
-        transition: 0.5s ease-in;
-    }
-    .cross {
-        color: #000;
-        background-color: rgba(0, 0, 0, 0);
-        font-size: 3rem;
-        border: 0;
-        padding-top: 0.2rem;
-        padding-left: 0.2rem;
-        cursor: pointer;
-        outline: none;
+        top: 6rem;
+        width: 100vw;
         display: none;
     }
-    .cross:hover {
-        color: #fff;
-        transition: 0.5s ease-in;
-    }
-    .navigation-items-list {
+    .navigation-items-list li {
         background-color: #fff;
+        float: none;
+    }
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .hamburger {
         display: block;
     }
-    .navigation-item {
-        display: block;
-        width: 100vw;
+    .cross {
+        display: none;
     }
     .navigation-item:hover {
          background-color: rgb(229, 11, 20);
@@ -137,17 +144,34 @@ header img {
     }
 }
 
+/* FUNKCJONALNOŚĆ */
+
 .section-container {
-    margin: 0px auto;
-    width: 960px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+
 }
 
 #details {
-    color: black;
+    color: whitesmoke;
+    background-color: midnightblue;
+    font-family:Lato, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+
 }
 
 #details h1 {
     text-align: center;
+    color:black;
+    background-color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family:Lato, sans-serif;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #details ul {
@@ -160,7 +184,223 @@ header img {
 
 #details ul li {
     min-height: 80px;
-    text-align: left;
     padding-left: 10px;
     list-style: disc;
+    text-align: justify;
+}
+
+/*FUNCTIONS*/
+
+.functions {
+    background-color: #ffffff;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.functions__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.functions__feature {
+    width: 25%;
+}
+
+.functions__icon {
+    color: #FF0013;
+    font-size: 50px;
+    text-align: center;
+}
+
+.functions__feature h3 {
+    font-size: 20px;
+    color: #000000;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+/*ENROLL SECTION*/
+
+.enroll {
+    background-color: #f2f2f2;
+    text-align: center;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.enroll__info {
+    text-align: center;
+    width: 100%;
+    height: 270px;
+}
+
+.enroll__icon {
+    width: 150px;
+    height: 150px;
+    }
+
+.enroll__info h1 {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.enroll__info h2 {
+    font-size: 23px;
+}
+
+.enroll__info h1, h2 {
+    padding-bottom: 10px;
+}
+
+.enroll__form {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.enroll__email {
+    width: 600px;
+    height: 40px;
+    border-radius: 30px 0 0 30px;
+    text-align: center;
+    border: 1px solid black;
+    border-right: 0;
+    font-size: 15px;
+}
+
+.enroll__button {
+    width: 100px;
+    height: 40px;
+    border-radius: 0 30px 30px 0;
+    text-align: center;
+    background-color: darkgrey;
+    font-weight: bolder;
+    font-size: 15px;
+    border: 1px solid black;
+    border-left: 0;
+}
+
+.enroll__button:hover {
+    opacity: 0.7;
+}
+
+.enroll__security {
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+/* TEAM */
+
+.team {
+    background-color: white;
+    padding-bottom: 60px;
+    padding-top: 20px;
+}
+
+.team__profiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.team__member {
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.team__photo img {
+    border-radius: 150px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.team__name {
+    position: relative;
+    text-align: center;
+    line-height: 1.4em;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.team__name::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background-color: #000;
+    transform: translate( -50%, 100%);
+    transition: 300ms width;
+}
+
+.team__name:hover::before {
+    width: 50%;
+}
+
+.team__description {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 7px;
+    height: 200px;
+}
+
+.team__social {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+}
+
+.social__icon {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+
+.social__icon:hover {
+    opacity: 0.5;
+    transition: 0.5s ease-in;
+}
+
+/* FOOTER */
+
+.footer {
+    padding-top: 30px;
+    width: 100%;
+    height: 130px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.footer__icon {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+}
+
+.footer__caption {
+    font-size: 11px;
+    color: white;
 }

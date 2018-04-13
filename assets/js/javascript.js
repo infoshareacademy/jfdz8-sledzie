@@ -1,32 +1,49 @@
 function handleNavigationEffect() {
     const scrollThreshold = 50;
-    const $navigation = $('.desktop-navigation');
+    const $navigation = $('.navigation');
 
-    $(this).scrollTop > scrollThreshold ?
+    $(this).scrollTop() > scrollThreshold ?
         $navigation.addClass('navigation-scroll') :
         $navigation.removeClass('navigation-scroll');
 }
 
 $(window).on('scroll', handleNavigationEffect);
 
-$( ".cross,.navigation-items-list" ).hide();
-$( ".hamburger" ).click(function() {
-    $( ".hamburger" ).hide();
-    $( ".cross" ).show();
-    $( ".navigation-items-list" ).slideToggle( "slow", function() {
-    });
+var handlersAreSet = false;
+
+var setHandlers = function() {
+    if ($(window).width() < 961) {
+        $(".hamburger").click(function () {
+            $('.navigation-items-list').slideToggle().addClass('navigation-expanded');
+            $(".hamburger").hide();
+            $(".cross").show();
+        });
+
+        $(".cross").click(function () {
+            $('.navigation-items-list').slideUp().removeClass('navigation-expanded');
+            $(".cross").hide();
+            $(".hamburger").show();
+        });
+
+        $('.navigation-items-list li').click(function () {
+            if ($(window).width() < 961) {
+                $('.navigation-items-list').slideUp().removeClass('navigation-expanded');
+                $(".cross").hide();
+                $(".hamburger").show();
+            };
+        });
+        handlersAreSet = true;
+    }
+};
+
+$(window).resize(function() {
+    if (handlersAreSet === false) {
+        setHandlers();
+    }
+
+    if ($(window).width() > 960) {
+        $(".navigation-items-list").show().unbind('click');
+    }
 });
 
-$( ".cross" ).click(function() {
-    $( ".cross" ).hide();
-    $( ".navigation-items-list" ).slideToggle( "slow", function() {
-        $( ".hamburger" ).show();
-    });
-});
-
-$( ".navigation-items-list" ).click(function() {
-    $( ".cross" ).hide();
-    $( ".navigation-items-list" ).slideToggle( "slow", function() {
-        $( ".hamburger" ).show();
-    });
-});
+setHandlers();
