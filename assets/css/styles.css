@@ -22,6 +22,7 @@ body {
     z-index: 4;
     top: 0;
     left: 0;
+    transition: 300ms;
 }
 .navigation:hover {
     background-color: rgb(229, 11, 20);
@@ -36,24 +37,23 @@ body {
     background-color: #fff;
     transition: 0.5s ease-in;
 }
-.navigation-items-list li {
-    float: left;
-    cursor: pointer;
-}
-.navigation-items-list li:hover {
-    background-color: #fff;
-    transition: 0.5s ease-in;
-}
-.navigation-item {
+/*.navigation-list li:hover {*/
+    /*background-color: #fff;*/
+    /*transition: 0.5s ease-in;*/
+/*}*/
+.navigation-list__item {
     display: block;
     padding: 2.16rem 2rem;
     color: #000;
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: lighter;
+    float: left;
+    cursor: pointer;
 }
-.navigation-item:hover {
+.navigation-list__item:hover {
     color: #ff0000;
+    background-color: #fff;
     transition: 0.5s ease-in;
 }
 .hamburger {
@@ -104,7 +104,7 @@ body {
     content:'';
     clear: both;
 }
-.navigation-items-list.navigation-expanded {
+.navigation-list.navigation-expanded {
     display: block;
 }
 .slider {
@@ -115,9 +115,28 @@ body {
 .slider-photos {
     width: 75%;
     float: left;
+    position: relative;
 }
 .slide-photo {
     width: 100%;
+}
+.slide-header {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50% -50%);
+    background: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 12%;
+    color: #fff;
+    text-align: center;
+    padding: 1vh;
+}
+.slide-header h1 {
+    font-size: 2vh;
+}
+.slide-header p {
+    font-size: 1.8vh;
 }
 .slider-miniatures {
     width: 25%;
@@ -156,13 +175,13 @@ body {
 }
 
 @media (max-width: 960px) {
-    .navigation-items-list {
+    .navigation-list {
         position: fixed;
         top: 6rem;
         width: 100vw;
         display: none;
     }
-    .navigation-items-list li {
+    .navigation-list__item {
         background-color: #fff;
         float: none;
     }
@@ -180,7 +199,7 @@ body {
     .navigation-item:hover {
          background-color: rgb(229, 11, 20);
     }
-    .navigation-items-list li:hover a {
+    .navigation-list_item:hover a {
         color: #fff;
         transition: 0.5s ease-in;
     }
