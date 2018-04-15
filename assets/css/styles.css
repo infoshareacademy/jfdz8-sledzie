@@ -221,7 +221,6 @@ body {
     margin: 0 auto;
     width: 90%;
     text-align: center;
-
 }
 
 #details {
@@ -230,7 +229,6 @@ body {
     font-family:Lato, sans-serif;
     text-transform: uppercase;
     font-size: 12px;
-
 }
 
 #details h1 {
@@ -321,11 +319,11 @@ h1{
 .enroll__icon {
     width: 150px;
     height: 150px;
-    }
+}
 
 .enroll__info h1 {
     font-size: 25px;
-    margin-top: 5px;
+
 }
 
 .enroll__info h2 {
@@ -444,13 +442,12 @@ h1{
     left: 45%;
 }
 
-.social__icon {
-    width: 30px;
-    height: 30px;
-    padding: 2px;
+.fa-facebook-f, .fa-github {
+    color: black;
+    font-size: 20px;
 }
 
-.social__icon:hover {
+.fa-github:hover, .fa-facebook-f:hover {
     opacity: 0.5;
     transition: 0.5s ease-in;
 }
