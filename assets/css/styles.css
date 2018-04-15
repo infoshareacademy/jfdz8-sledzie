@@ -262,15 +262,13 @@ body {
 
 .functions {
     background-color: #ffffff;
-    padding-bottom: 40px;
-    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 h1{
     text-align: center;
     font-size: 40px;
-    padding-bottom: 30px;
-    padding-top: 20px;
 }
 
 .functions__container {
@@ -280,8 +278,8 @@ h1{
     flex-direction: row;
     width: 90%;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 
 .functions__feature {
@@ -307,7 +305,8 @@ h1{
     background-color: #f2f2f2;
     text-align: center;
     height: 400px;
-    margin-top: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .enroll__info {
@@ -323,7 +322,6 @@ h1{
 
 .enroll__info h1 {
     font-size: 25px;
-
 }
 
 .enroll__info h2 {
@@ -331,15 +329,20 @@ h1{
 }
 
 .enroll__info h1, h2 {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .enroll__form {
+    height: 100px;
+}
+
+form {
     width: 100%;
     height: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top:30px;
 }
 
 .enroll__email {
@@ -362,6 +365,7 @@ h1{
     font-size: 15px;
     border: 1px solid black;
     border-left: 0;
+    transition: 0.5s ease-in;
 }
 
 .enroll__button:hover {
@@ -370,17 +374,16 @@ h1{
 
 .enroll__security {
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
     font-style: italic;
-    padding-top: 20px;
 }
 
 /* TEAM */
 
 .team {
     background-color: white;
-    padding-bottom: 60px;
-    padding-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .team__profiles {
@@ -390,6 +393,7 @@ h1{
     justify-content: space-around;
     width: 90%;
     margin: 0 auto;
+    padding-top: 80px;
 }
 
 .team__member {
@@ -398,11 +402,48 @@ h1{
     position: relative;
 }
 
-.team__photo img {
+.team__photo {
     border-radius: 150px;
     width: 100px;
     height: 100px;
-    text-align: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.team__photo.magda {
+    background-image: url('../img/Magda.png');
+}
+.team__photo.magda:hover {
+    background-image: url('../img/Agata.png');
+}
+
+.team__photo.agata {
+    background-image: url('../img/Agata.png');
+}
+
+.team__photo.agata:hover {
+    background-image: url('../img/Magda.png');
+}
+
+.team__photo.kuba {
+    background-image: url('../img/Kuba.png');
+}
+
+.team__photo.kuba:hover {
+    background-image: url('../img/Agata.png');
+}
+
+.team__photo.piotrek {
+    background-image: url('../img/Piotrek.png');
+}
+
+.team__photo.piotrek:hover {
+    background-image: url('../img/Agata.png');
+}
+
+.team__photo:hover {
+    transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
 }
 
 .team__name {
@@ -432,7 +473,7 @@ h1{
 .team__description {
     text-align: center;
     font-size: 18px;
-    padding-top: 7px;
+    padding-top: 15px;
     height: 200px;
 }
 
@@ -445,11 +486,12 @@ h1{
 .fa-facebook-f, .fa-github {
     color: black;
     font-size: 20px;
+    margin: 5px;
 }
 
 .fa-github:hover, .fa-facebook-f:hover {
-    opacity: 0.5;
     transition: 0.5s ease-in;
+    color: red;
 }
 
 /* FOOTER */
