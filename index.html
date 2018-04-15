@@ -25,15 +25,12 @@
                 <li><a class="navigation-item" href="#team" title="O twórcach">zespół</a></li>
             </ul>
         </nav>
-
-
         <div class="slider clearfix">
             <div class="slider-photos">
                 <img class="slide-photo" src="assets/img/marvel_bg.jpg" alt="just test image">
                 <img class="slide-photo" src="assets/img/marvel_bg2.jpg" alt="just test image">
                 <img class="slide-photo" src="assets/img/marvel_bg3.jpg" alt="just test image">
             </div>
-
             <div class="slider-miniatures">
                 <div class="slider-item">
                     <img class="slider-image slider-image-miniature " src="assets/img/marvel_bg.jpg" onclick="currentDiv(1)">
@@ -55,10 +52,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
         <section></section>
         <section></section>
         <section id="project" class="functions">
@@ -132,22 +125,23 @@
                <h1>Chcesz wiedzieć więcej? Nie przegap premiery!</h1>
                <h2>Otrzymasz tylko jedną wiadomość!</h2>
             </div>
-            <form class="enroll__form" action="https://formspree.io/agatabudzinska@gmail.com" method="POST">
-                <input class="enroll__email" type="email" name="email" placeholder="Wpisz swój e-mail, aby być na bieżąco" required>
-                <input class="enroll__button" type="submit" value="Wyślij">
+            <div class="enroll__form">
+            <form action="https://formspree.io/agatabudzinska@gmail.com" method="POST">
+            <input class="enroll__email" type="email" name="email" placeholder="Wpisz swój e-mail, aby być na bieżąco" required>
+            <input class="enroll__button" type="submit" value="Wyślij">
             </form>
-            <p class="enroll__security">
-                Wszystkie adresy dopisane do listy mailingowej wykorzystywane są wyłącznie w celu
-                wysłania jednorazowej notyfkacji. Żadne dane użytkowników nie są przekazywane osobom trzecim.
-            </p>
+            </div>
+            <div class="enroll__security">
+                <p>Wszystkie adresy dopisane do listy mailingowej wykorzystywane są wyłącznie w celu
+                wysłania jednorazowej notyfkacji.</p>
+                <p>Żadne dane użytkowników nie są przekazywane osobom trzecim.</p>
+            </div>
         </section>
         <section id="team" class="team">
             <h1>Kim jesteśmy</h1>
             <div class="team__profiles">
                 <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Magda.png" alt="Magda Łazarska">
-                    </figure>
+                    <figure class="team__photo magda"></figure>
                     <h2 class="team__name">Magda Łazarska</h2>
                     <p class="team__description">
                         Fotograf, Geograf, Frontend Developer wannabe. Cmsy, Wordpressy,
@@ -155,32 +149,26 @@
                         szczególnie po Skandynawii chociaż nie pogardzi też Bałkanami, Bliskim Wschodem, a nawet Płockiem.
                     </p>
                     <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon" src="assets/img/facebook_icon_black.svg"
-                        alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                        alt="Ikona Github"></a>
+                        <a href="#" title="Facebook" target="_blank"><img class="fab fa-facebook-f">
+                        </a>
+                        <a href="#" title="Github" target="_blank"><img class="fab fa-github"></a>
                     </footer>
                 </div>
                 <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Agata.png" alt="Agata Budzińska">
-                    </figure>
+                    <figure class="team__photo agata"></figure>
                     <h2 class="team__name">Agata Budzińska</h2>
                     <p class="team__description">
                         Fanatyczna miłośniczka kotów i gołębi, dobrego jedzenia, Skandynawii, entuzjastka kina (w tym oczywiście
                         produkcji spod skrzydeł Marvel Studios).
                     </p>
                     <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon" src="assets/img/facebook_icon_black.svg"
-                        alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                        alt="Ikona Github"></a>
+                        <a href="#" title="Facebook" target="_blank"><img class="fab fa-facebook-f">
+                       </a>
+                        <a href="#" title="Github" target="_blank"><img class="fab fa-github"></a>
                     </footer>
                 </div>
                 <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Kuba.png" alt="Jakub Wypijewski">
-                    </figure>
+                    <figure class="team__photo kuba"></figure>
                     <h2 class="team__name">Jakub Wypijewski</h2>
                     <p class="team__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -188,16 +176,12 @@
                         Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon" src="assets/img/facebook_icon_black.svg"
-                        alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                        alt="Ikona Github"></a>
+                        <a href="#" title="Facebook" target="_blank"><img class="fab fa-facebook-f"></a>
+                        <a href="#" title="Github" target="_blank"><img class="fab fa-github"></a>
                     </footer>
                 </div>
                 <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Piotrek.png" alt="Piotr Nowosławski">
-                    </figure>
+                    <figure class="team__photo piotrek"></figure>
                     <h2 class="team__name">Piotr Nowosławski</h2>
                     <p class="team__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
@@ -205,10 +189,8 @@
                         laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon" src="assets/img/facebook_icon_black.svg"
-                        alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                        alt="Ikona Github"></a>
+                        <a href="#" title="Facebook" target="_blank"><img class="fab fa-facebook-f"></a>
+                        <a href="#" title="Github" target="_blank"><img class="fab fa-github"></a>
                     </footer>
                 </div>
             </div>
