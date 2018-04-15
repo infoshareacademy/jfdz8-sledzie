@@ -14,20 +14,20 @@ var handlersAreSet = false;
 var setHandlers = function() {
     if ($(window).width() < 961) {
         $(".hamburger").click(function () {
-            $('.navigation-items-list').slideToggle().addClass('navigation-expanded');
+            $('.navigation-list').slideToggle().addClass('navigation-expanded');
             $(".hamburger").hide();
             $(".cross").show();
         });
 
         $(".cross").click(function () {
-            $('.navigation-items-list').slideUp().removeClass('navigation-expanded');
+            $('.navigation-list').slideUp().removeClass('navigation-expanded');
             $(".cross").hide();
             $(".hamburger").show();
         });
 
-        $('.navigation-items-list li').click(function () {
+        $('.navigation-list li').click(function () {
             if ($(window).width() < 961) {
-                $('.navigation-items-list').slideUp().removeClass('navigation-expanded');
+                $('.navigation-list').slideUp().removeClass('navigation-expanded');
                 $(".cross").hide();
                 $(".hamburger").show();
             };
@@ -42,7 +42,7 @@ $(window).resize(function() {
     }
 
     if ($(window).width() > 960) {
-        $(".navigation-items-list").show().unbind('click');
+        $(".navigation-list").show().unbind('click');
     }
 });
 
@@ -61,7 +61,7 @@ function currentDiv(n) {
 
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("slide-photo");
+    var x = document.getElementsByClassName("slide-photo-box");
     var dots = document.getElementsByClassName("slider-image");
     if (n > x.length) {slideIndex = 1}
     if (n < 1) {slideIndex = x.length}
