@@ -37,14 +37,10 @@ body {
     background-color: #fff;
     transition: 0.5s ease-in;
 }
-.navigation-list li {
-    float: left;
-    cursor: pointer;
-}
-.navigation-list li:hover {
-    background-color: #fff;
-    transition: 0.5s ease-in;
-}
+/*.navigation-list li:hover {*/
+    /*background-color: #fff;*/
+    /*transition: 0.5s ease-in;*/
+/*}*/
 .navigation-list__item {
     display: block;
     padding: 2.16rem 2rem;
@@ -52,9 +48,12 @@ body {
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: lighter;
+    float: left;
+    cursor: pointer;
 }
 .navigation-list__item:hover {
     color: #ff0000;
+    background-color: #fff;
     transition: 0.5s ease-in;
 }
 .hamburger {
@@ -133,7 +132,7 @@ body {
     text-align: center;
     padding: 1vh;
 }
-.slide-header h3 {
+.slide-header h1 {
     font-size: 2vh;
 }
 .slide-header p {
@@ -182,7 +181,7 @@ body {
         width: 100vw;
         display: none;
     }
-    .navigation-list li {
+    .navigation-list__item {
         background-color: #fff;
         float: none;
     }
@@ -200,7 +199,7 @@ body {
     .navigation-item:hover {
          background-color: rgb(229, 11, 20);
     }
-    .navigation-list li:hover a {
+    .navigation-list_item:hover a {
         color: #fff;
         transition: 0.5s ease-in;
     }

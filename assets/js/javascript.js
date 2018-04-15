@@ -61,16 +61,16 @@ function currentDiv(n) {
 
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("slide-photo-box");
+    var slideFoto = document.getElementsByClassName("slide-photo-box");
     var dots = document.getElementsByClassName("slider-image");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    if (n > slideFoto.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slideFoto.length}
+    for (i = 0; i < slideFoto.length; i++) {
+        slideFoto[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" slider-image-miniature", "");
     }
-    x[slideIndex-1].style.display = "block";
+    slideFoto[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " slider-image-miniature";
 }
