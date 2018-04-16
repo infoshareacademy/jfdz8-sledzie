@@ -415,10 +415,31 @@ form {
     padding-top: 80px;
 }
 
+
 .team__member {
     width: 350px;
     text-align: center;
     position: relative;
+}
+
+.team__member:hover .team__photo.magda {
+    background-image: url('../img/Agata.png');
+}
+
+.team__member:hover .team__photo.agata {
+    background-image: url('../img/Magda.png');
+}
+
+.team__member:hover .team__photo.kuba {
+    background-image: url('../img/Agata.png');
+}
+
+.team__member:hover .team__photo.piotrek {
+    background-image: url('../img/Agata.png');
+}
+
+.team__member:hover .team__name::before {
+    width: 50%;
 }
 
 .team__photo {
@@ -427,43 +448,39 @@ form {
     height: 100px;
     background-size: cover;
     margin: 0 auto;
+    transition: 0.5s ease-in;
 }
 
 .team__photo.magda {
     background-image: url('../img/Magda.png');
 }
-.team__photo.magda:hover {
-    background-image: url('../img/Agata.png');
-}
+/*.team__photo.magda:hover {*/
+    /*background-image: url('../img/Agata.png');*/
+/*}*/
 
 .team__photo.agata {
     background-image: url('../img/Agata.png');
 }
 
-.team__photo.agata:hover {
-    background-image: url('../img/Magda.png');
-}
+/*.team__photo.agata:hover {*/
+    /*background-image: url('../img/Magda.png');*/
+/*}*/
 
 .team__photo.kuba {
     background-image: url('../img/Kuba.png');
 }
 
-.team__photo.kuba:hover {
-    background-image: url('../img/Agata.png');
-}
+/*.team__photo.kuba:hover {*/
+    /*background-image: url('../img/Agata.png');*/
+/*}*/
 
 .team__photo.piotrek {
     background-image: url('../img/Piotrek.png');
 }
 
-.team__photo.piotrek:hover {
-    background-image: url('../img/Agata.png');
-}
-
-.team__photo:hover {
-    transition: 0.5s ease-in;
-    -moz-transition: 0.5s ease-in;
-}
+/*.team__photo.piotrek:hover {*/
+    /*background-image: url('../img/Agata.png');*/
+/*}*/
 
 .team__name {
     position: relative;
@@ -485,9 +502,9 @@ form {
     transition: 300ms width;
 }
 
-.team__name:hover::before {
-    width: 50%;
-}
+/*.team__name:hover::before {*/
+    /*width: 50%;*/
+/*}*/
 
 .team__description {
     text-align: center;
