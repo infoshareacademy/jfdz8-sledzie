@@ -298,11 +298,18 @@ h1{
     width: 90%;
     margin: 0 auto;
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 
 .functions__feature {
-    width: 25%;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .functions__feature {
+        width: 25%;
+    }
 }
 
 .functions__icon {
@@ -340,11 +347,11 @@ h1{
 }
 
 .enroll__info h1 {
-    font-size: 25px;
+    font-size: 38px;
 }
 
 .enroll__info h2 {
-    font-size: 23px;
+    font-size: 30px;
 }
 
 .enroll__info h1, h2 {
@@ -356,22 +363,35 @@ h1{
 }
 
 form {
-    width: 100%;
+    width: 70%;
     height: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    margin: 0 auto;
     padding-top:30px;
 }
 
+@media (min-width: 768px) {
+    form {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 .enroll__email {
-    width: 600px;
+    width: 400px;
     height: 40px;
     border-radius: 30px 0 0 30px;
     text-align: center;
     border: 1px solid black;
     border-right: 0;
     font-size: 15px;
+}
+
+@media (min-width: 768px) {
+    .enroll__email {
+        width: 600px;
+    }
 }
 
 .enroll__button {
@@ -387,13 +407,14 @@ form {
     transition: 0.5s ease-in;
 }
 
+
 .enroll__button:hover {
     opacity: 0.7;
 }
 
-.enroll__security {
+.enroll__security p {
     text-align: center;
-    font-size: 18px;
+    font-size: 13px;
     font-style: italic;
 }
 
@@ -407,14 +428,12 @@ form {
 
 .team__profiles {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90%;
     margin: 0 auto;
     padding-top: 80px;
 }
-
 
 .team__member {
     width: 350px;
@@ -438,10 +457,6 @@ form {
     background-image: url('../img/Agata.png');
 }
 
-.team__member:hover .team__name::before {
-    width: 50%;
-}
-
 .team__photo {
     border-radius: 150px;
     width: 100px;
@@ -454,33 +469,18 @@ form {
 .team__photo.magda {
     background-image: url('../img/Magda.png');
 }
-/*.team__photo.magda:hover {*/
-    /*background-image: url('../img/Agata.png');*/
-/*}*/
 
 .team__photo.agata {
     background-image: url('../img/Agata.png');
 }
 
-/*.team__photo.agata:hover {*/
-    /*background-image: url('../img/Magda.png');*/
-/*}*/
-
 .team__photo.kuba {
     background-image: url('../img/Kuba.png');
 }
 
-/*.team__photo.kuba:hover {*/
-    /*background-image: url('../img/Agata.png');*/
-/*}*/
-
 .team__photo.piotrek {
     background-image: url('../img/Piotrek.png');
 }
-
-/*.team__photo.piotrek:hover {*/
-    /*background-image: url('../img/Agata.png');*/
-/*}*/
 
 .team__name {
     position: relative;
@@ -490,33 +490,45 @@ form {
     padding-top: 5px;
 }
 
-.team__name::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    left: 50%;
-    bottom: 0;
-    height: 3px;
-    background-color: #000;
-    transform: translate( -50%, 100%);
-    transition: 300ms width;
+@media (min-width: 768px) {
+    .team__name::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background-color: #000;
+        transform: translate( -50%, 100%);
+        transition: 300ms;
+    }
 }
 
-/*.team__name:hover::before {*/
-    /*width: 50%;*/
-/*}*/
+@media (min-width: 768px) {
+    .team__member:hover .team__name::before {
+        width: 60%;
+    }
+}
 
 .team__description {
+    border-top: 2px solid #000000;
     text-align: center;
     font-size: 18px;
     padding-top: 15px;
-    height: 200px;
+    height: 230px;
+}
+
+@media (min-width: 768px) {
+    .team__description {
+        border-top: none;
+    }
 }
 
 .team__social {
     position: absolute;
     bottom: 0;
     left: 45%;
+    padding-bottom: 20px;
 }
 
 .fa-facebook-f, .fa-github {
