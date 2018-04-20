@@ -7,12 +7,6 @@
     text-decoration: none;
     list-style-type: none;
 }
-
-body {
-    width: 100vw;
-    background-color: #f0f0f0;
-    height: 2000px;
-}
 .container {
     width: 100vw;
 }
@@ -38,10 +32,6 @@ body {
     background-color: #fff;
     transition: 0.5s ease-in;
 }
-/*.navigation-list li:hover {*/
-    /*background-color: #fff;*/
-    /*transition: 0.5s ease-in;*/
-/*}*/
 .navigation-list__item {
     display: block;
     padding: 2.16rem 2rem;
@@ -110,12 +100,6 @@ body {
 }
 .slider {
     width: 100vw;
-    padding-bottom: 0.8%;
-    background: #000;
-}
-.slider-photos {
-    width: 75%;
-    float: left;
     position: relative;
 }
 .slide-photo {
@@ -123,15 +107,16 @@ body {
 }
 .slide-header {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    right: 0;
+    top: 10%;
     transform: translate(-50% -50%);
-    background: rgba(0,0,0,0.1);
-    width: 100%;
+    background: rgba(0,0,0,1);
+    width: 30%;
     height: 12%;
     color: #fff;
     text-align: center;
-    padding: 1vh;
+    padding: 2%;
+    display: none;
 }
 .slide-header h1 {
     font-size: 2vh;
@@ -140,52 +125,74 @@ body {
     font-size: 1.8vh;
 }
 .slider-miniatures {
-    width: 25%;
-    background: #000;
-    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
 }
 .slider-item {
-    padding-top: 4%;
-    margin: auto;
-    width: 92%;
+    padding: 1%;
+    width: 20%;
+    margin-left: 10%;
     cursor: pointer;
     position: relative;
+    float: left;
 }
 .slider-image {
     width: 100%;
+    opacity: 0.5;
 }
 .slider-image-description {
-    width: 100%;
+    width: 90%;
     height: 50%;
     color: transparent;
     position: absolute;
-    bottom: 0;
+    bottom: 9%;
     background: transparent;
 }
 .slider-image-description p {
-    padding: 2% 2%;
-    font-size: 1.8vh;
+    padding: 10% 2%;
+    font-size: 2vh;
     letter-spacing: 0.2vw;
+    text-align: center;
 }
 .slider-item:hover .slider-image-description {
     display: block;
     color: white;
-    background: rgba(0,0,0,1);
+    background: rgba(0,0,0,0.5);
     transition: 1s ease-in;
-    width: 100%;
+}
+.slider-item:hover img {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .slider-image-description p {
+        display: none;
+    }
+    .slider-image-description {
+        height: 90%;
+    }
+}
+@media (max-width: 576px) {
+    .hidden {
+        visibility: hidden;
+    }
+    .slider-image-description p {
+        font-size: 1vh;
+    }
+}
+
+@media (max-width: 600px)  {
+    .slide-header h1 {
+        font-size: 1.4vh;
+    }
+    .slide-header p {
+        font-size: 1.2vh;
+    }
 }
 
 @media (max-width: 960px) {
-    .navigation-list {
-        position: fixed;
-        top: 6rem;
-        width: 100vw;
-        display: none;
-    }
-    .navigation-list__item {
-        background-color: #fff;
-        float: none;
-    }
     .logo {
         position: absolute;
         top: 0;
@@ -197,41 +204,55 @@ body {
     .cross {
         display: none;
     }
-    .navigation-item:hover {
-         background-color: rgb(229, 11, 20);
+    .navigation-list {
+        position: fixed;
+        top: 6rem;
+        width: 100vw;
+        display: none;
     }
-    .navigation-list_item:hover a {
+    .navigation-list__item {
+        background-color: #fff;
+        float: none;
+    }
+    .navigation-list__item:hover {
+        background-color: rgb(229, 11, 20);
         color: #fff;
         transition: 0.5s ease-in;
     }
-}
-@media (max-width: 1200px) {
     .slider {
-        padding-bottom: 0
-    }
-    .slider-photos {
-        width: 100%;
-        float: none;
+        background: #000;
     }
     .slider-miniatures {
-        width: 100%;
-        background: #000;
+        position: static;
     }
     .slider-item {
         width: 27%;
         padding: 2% 0;
         margin: 0 3%;
-        float: left;
+    }
+    .slide-header {
+        top: 16%;
+        padding: 2.5%;
+    }
+    .slider-image {
+        opacity: 1;
+    }
+    .slider-image-description {
+        width: 100%;
+        bottom: 11%;
     }
     .slider-image-description p {
-        padding: 2% 2%;
-        font-size: 1.8vh;
-        letter-spacing: 0.2vw;
+        padding-top: 10%;
+        font-size: 1.6vh;
+    }
+    .slider-item:hover .slider-image-description {
+        background: #000;
     }
 }
-@media (max-width: 576px) {
+@media (min-width: 960px) and (max-width: 1280px) {
     .slider-image-description p {
-        font-size: 1.2vh;
+        padding-top: 6%;
+        font-size: 1.6vh;
     }
 }
 
