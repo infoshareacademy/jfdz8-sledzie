@@ -313,23 +313,43 @@ h1{
 }
 
 .functions__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     width: 90%;
     margin: 0 auto;
-    padding-top: 80px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+    .functions__container {
+        padding-top: 100px;
+    }
 }
 
 .functions__feature {
-    width: 25%;
+    width: 100%;
+    padding-bottom: 100px;
+    transform: translateY(50%);
+}
+
+@media (min-width: 768px) {
+    .functions__feature {
+        width: 25%;
+    }
 }
 
 .functions__icon {
     color: #FF0013;
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
 }
 
@@ -362,11 +382,11 @@ h1{
 }
 
 .enroll__info h1 {
-    font-size: 25px;
+    font-size: 38px;
 }
 
 .enroll__info h2 {
-    font-size: 23px;
+    font-size: 30px;
 }
 
 .enroll__info h1, h2 {
@@ -379,57 +399,92 @@ h1{
 
 form {
     width: 100%;
-    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    padding-top:30px;
+    padding-top: 60px;
 }
 
 .enroll__email {
-    width: 600px;
+    width: 45%;
     height: 40px;
     border-radius: 30px 0 0 30px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-right: 0;
-    font-size: 15px;
+    font-size: 13px;
+}
+
+@media (min-width: 768px) {
+    .enroll__email {
+        width: 35%;
+    }
 }
 
 .enroll__button {
     width: 100px;
     height: 40px;
+    -webkit-appearance: none;
     border-radius: 0 30px 30px 0;
     text-align: center;
-    background-color: darkgrey;
+    background-color: #a9a9a9;
+    color: #000000;
     font-weight: bolder;
     font-size: 15px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-left: 0;
-    transition: 0.5s ease-in;
+    cursor: pointer;
 }
 
-.enroll__button:hover {
-    opacity: 0.7;
+.enroll__button:active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+@media (min-width: 768px){
+    .enroll__button {
+        -webkit-transition: 0.3s ease-in;
+        -o-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+    }
+}
+
+@media (min-width: 768px) {
+    .enroll__button:hover {
+        opacity: 0.7;
+    }
 }
 
 .enroll__security {
     text-align: center;
-    font-size: 18px;
     font-style: italic;
+    margin-top: 20px;
+}
+
+.enroll__security p {
+    font-size: 13px;
 }
 
 /* TEAM */
 
 .team {
-    background-color: white;
+    background-color: #ffffff;
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
 .team__profiles {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90%;
@@ -441,6 +496,7 @@ form {
     width: 350px;
     text-align: center;
     position: relative;
+    margin-top: 30px;
 }
 
 .team__photo {
@@ -449,42 +505,99 @@ form {
     height: 100px;
     background-size: cover;
     margin: 0 auto;
+    position: relative;
 }
 
 .team__photo.magda {
     background-image: url('../img/Magda.png');
-}
-.team__photo.magda:hover {
-    background-image: url('../img/Agata.png');
 }
 
 .team__photo.agata {
     background-image: url('../img/Agata.png');
 }
 
-.team__photo.agata:hover {
-    background-image: url('../img/Magda.png');
-}
-
 .team__photo.kuba {
     background-image: url('../img/Kuba.png');
-}
-
-.team__photo.kuba:hover {
-    background-image: url('../img/Agata.png');
 }
 
 .team__photo.piotrek {
     background-image: url('../img/Piotrek.png');
 }
 
-.team__photo.piotrek:hover {
-    background-image: url('../img/Agata.png');
-}
+@media (min-width: 786px) {
+    .team__photo::before, .team__photo::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+    }
 
-.team__photo:hover {
-    transition: 0.5s ease-in;
-    -moz-transition: 0.5s ease-in;
+    .team__photo.magda::before {
+        background-image: url('../img/Magda.png');
+        z-index: 1;
+        transition: opacity 0.9s;
+        background-size: cover;
+    }
+
+    .team__photo.magda::after {
+        background-image: url('../img/Agata.png');
+        background-size: cover;
+    }
+
+    .team__member:hover .team__photo.magda::before {
+        opacity: 0;
+    }
+
+    .team__photo.agata::before {
+        background-image: url('../img/Agata.png');
+        z-index: 1;
+        transition: opacity 0.9s;
+        background-size: cover;
+    }
+
+    .team__photo.agata::after {
+        background-image: url('../img/Magda.png');
+        background-size: cover;
+    }
+
+    .team__member:hover .team__photo.agata::before {
+        opacity: 0;
+    }
+
+     .team__photo.kuba::before {
+        background-image: url('../img/Kuba.png');
+        z-index: 1;
+        transition: opacity 0.9s;
+        background-size: cover;
+    }
+
+    .team__photo.kuba::after {
+        background-image: url('../img/Agata.png');
+        background-size: cover;
+    }
+
+    .team__member:hover .team__photo.kuba::before {
+        opacity: 0;
+    }
+
+    .team__photo.piotrek::before {
+        background-image: url('../img/Piotrek.png');
+        z-index: 1;
+        transition: opacity 0.9s;
+        background-size: cover;
+    }
+
+    .team__photo.piotrek::after {
+        background-image: url('../img/Agata.png');
+        background-size: cover;
+    }
+
+    .team__member:hover .team__photo.piotrek::before {
+        opacity: 0;
+    }
 }
 
 .team__name {
@@ -495,27 +608,42 @@ form {
     padding-top: 5px;
 }
 
-.team__name::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    left: 50%;
-    bottom: 0;
-    height: 3px;
-    background-color: #000;
-    transform: translate( -50%, 100%);
-    transition: 300ms width;
+@media (min-width: 768px) {
+    .team__name::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background-color: #000;
+        -webkit-transform: translate( -50%, 100%);
+        -ms-transform: translate( -50%, 100%);
+        transform: translate( -50%, 100%);
+        -webkit-transition: 300ms;
+        -o-transition: 300ms;
+        transition: 300ms;
+    }
 }
 
-.team__name:hover::before {
-    width: 50%;
+@media (min-width: 768px) {
+    .team__member:hover .team__name::before {
+        width: 60%;
+    }
 }
 
 .team__description {
+    border-top: 2px solid #000000;
     text-align: center;
     font-size: 18px;
     padding-top: 15px;
-    height: 200px;
+    height: 230px;
+}
+
+@media (min-width: 768px) {
+    .team__description {
+        border-top: none;
+    }
 }
 
 .team__social {
@@ -524,15 +652,29 @@ form {
     left: 45%;
 }
 
+
 .fa-facebook-f, .fa-github {
     color: black;
     font-size: 20px;
     margin: 5px;
 }
 
-.fa-github:hover, .fa-facebook-f:hover {
-    transition: 0.5s ease-in;
-    color: red;
+.fa-facebook-f:active, .fa-github:active {
+    color: #ff0000;
+}
+
+@media (min-width: 768px) {
+    .fa-facebook-f, .fa-github {
+        -webkit-transition: 0.3s ease-in;
+        -o-transition: 0.3s ease-in;
+        transition: 0.3s ease-in;
+    }
+}
+
+@media (min-width: 768px) {
+    .fa-github:hover, .fa-facebook-f:hover {
+        color: red;
+    }
 }
 
 /* FOOTER */
