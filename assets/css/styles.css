@@ -591,8 +591,9 @@ form {
     }
 
     .team__photo.piotrek::after {
-        background-image: url('../img/Agata.png');
+        background-image: url('../img/piotrek-photo.jpg');
         background-size: cover;
+        border-radius: 50%;
     }
 
     .team__member:hover .team__photo.piotrek::before {
