@@ -365,9 +365,8 @@ h1{
 .enroll {
     background-color: #f2f2f2;
     text-align: center;
-    height: 400px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    height: 650px;
+    padding-top: 100px;
 }
 
 .enroll__info {
@@ -493,7 +492,7 @@ form {
 }
 
 .team__member {
-    width: 350px;
+    width: 450px;
     text-align: center;
     position: relative;
     margin-top: 30px;
@@ -514,10 +513,6 @@ form {
 
 .team__photo.agata {
     background-image: url('../img/Agata.png');
-}
-
-.team__photo.kuba {
-    background-image: url('../img/Kuba.png');
 }
 
 .team__photo.piotrek {
@@ -564,22 +559,6 @@ form {
     }
 
     .team__member:hover .team__photo.agata::before {
-        opacity: 0;
-    }
-
-     .team__photo.kuba::before {
-        background-image: url('../img/Kuba.png');
-        z-index: 1;
-        transition: opacity 0.9s;
-        background-size: cover;
-    }
-
-    .team__photo.kuba::after {
-        background-image: url('../img/Agata.png');
-        background-size: cover;
-    }
-
-    .team__member:hover .team__photo.kuba::before {
         opacity: 0;
     }
 
@@ -638,7 +617,7 @@ form {
     text-align: center;
     font-size: 18px;
     padding-top: 15px;
-    height: 230px;
+    height: 190px;
 }
 
 @media (min-width: 768px) {
@@ -649,7 +628,7 @@ form {
 
 .team__social {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 45%;
 }
 
