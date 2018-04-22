@@ -10,26 +10,67 @@
 </head>
 <body>
 <main>
-    <div class="container">
+    <div class="container" id="start">
         <nav class="navigation">
             <button class="hamburger" title="Otwórz menu">&#9776;</button>
             <button class="cross" title="Zamknij menu">&#x2716;</button>
             <a href="#start">
                 <img class="logo" src="assets/img/marvelstudios_logo.png" alt="Logo strony"/>
             </a>
-            <ul class="navigation-items-list">
-                <li><a class="navigation-item" href="#start" title="Powrót do początku strony">start</a></li>
-                <li><a class="navigation-item" href="#projekt" title="Opis i funkcja projektu">projekt</a></li>
-                <li><a class="navigation-item" href="#zapisz" title="Nie przegap daty premiery">zapisz się</a></li>
-                <li><a class="navigation-item" href="#Szczegóły" title="Poznaj funkcjonalności aplikacji">szczegóły</a>
-                </li>
-                <li><a class="navigation-item" href="#zespół" title="O twórcach">zespół</a></li>
+            <ul class="navigation-list">
+                <li><a class="navigation-list__item" href="#start" title="Powrót do początku strony">start</a></li>
+                <li><a class="navigation-list__item" href="#project" title="Opis i funkcja projektu">projekt</a></li>
+                <li><a class="navigation-list__item" href="#sign-up" title="Nie przegap daty premiery">zapisz się</a></li>
+                <li><a class="navigation-list__item" href="#details" title="Poznaj funkcjonalności aplikacji">szczegóły</a></li>
+                <li><a class="navigation-list__item" href="#team" title="O twórcach">zespół</a></li>
             </ul>
         </nav>
-        <img class="background-test" src="assets/img/marvel_bg.jpg" alt="just test image"/>
-        <section></section>
-        <section></section>
-        <section id="projekt" class="functions">
+        <div class="slider clearfix">
+            <div class="slider-photos">
+                <div class="slide-photo-box">
+                    <img class="slide-photo" src="assets/img/marvel_bg.jpg" alt="just test image">
+                </div>
+                <div class="slide-header show1 hidden">
+                    <h1>Super ekstra HERO 1</h1>
+                    <p>Walcz, walcz walcz i giń!</p>
+                </div>
+                <div class="slide-photo-box">
+                    <img class="slide-photo" src="assets/img/marvel_bg2.jpg" alt="just test image">
+                </div>
+                <div class="slide-header show2 hidden">
+                    <h1>Super ekstra HERO 2</h1>
+                    <p>Walcz, walcz walcz i giń!</p>
+                </div>
+                <div class="slide-photo-box">
+                    <img class="slide-photo" src="assets/img/marvel_bg3.jpg" alt="just test image">
+                </div>
+                <div class="slide-header show3 hidden">
+                    <h1>Super ekstra HERO 3</h1>
+                    <p>Walcz, walcz walcz i giń!</p>
+                </div>
+            </div>
+            <div class="slider-miniatures">
+                <div class="slider-item box1">
+                    <img class="slider-image slider-image-miniature " src="assets/img/marvel_bg.jpg" onclick="currentDiv(1)">
+                    <div class="slider-image-description" onclick="currentDiv(1)">
+                        <p>Poznaj bohaterów z uniwersum MARVELa</p>
+                    </div>
+                </div>
+                <div class="slider-item box2">
+                    <img class="slider-image slider-image-miniature" src="assets/img/marvel_bg2.jpg" onclick="currentDiv(2)">
+                    <div class="slider-image-description" onclick="currentDiv(2)">
+                        <p>Odkryj moce i słabości</p>
+                    </div>
+                </div>
+                <div class="slider-item box3">
+                    <img class="slider-image slider-image-miniature" src="assets/img/marvel_bg3.jpg" onclick="currentDiv(3)">
+                    <div class="slider-image-description" onclick="currentDiv(3)">
+                        <p>Przeszukaj archiwa i znajdź swojego bohatera</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="project" class="functions">
             <h1>Co zyskujesz dzięki naszej aplikacji</h1>
             <div class="functions__container">
                 <div class="functions__feature">
@@ -120,108 +161,73 @@
                 </ul>
             </div>
         </section>
-        <section id="zapisz" class="enroll">
+        <section id="sign-up" class="enroll">
             <div class="enroll__info">
-                <img class="enroll__icon" src="assets/img/letter_icon.png" alt="obrazek">
-                <h1>Chcesz wiedzieć więcej? Nie przegap premiery!</h1>
-                <h2>Otrzymasz tylko jedną wiadomość!</h2>
+               <img class="enroll__icon" src="assets/img/letter_icon.png" alt="obrazek">
+               <h1>Chcesz wiedzieć więcej? Nie przegap premiery!</h1>
+               <h2>Otrzymasz tylko jedną wiadomość!</h2>
             </div>
-            <form class="enroll__form" action="https://formspree.io/agatabudzinska@gmail.com" method="POST">
-                <input class="enroll__email" type="email" name="email"
-                       placeholder="Wpisz swój e-mail, aby być na bieżąco" required>
+            <div class="enroll__form">
+                <form action="https://formspree.io/agatabudzinska@gmail.com" method="POST">
+                <input class="enroll__email" type="email" name="email" placeholder="Wpisz swój e-mail, aby być na bieżąco" required>
                 <input class="enroll__button" type="submit" value="Wyślij">
-            </form>
-            <p class="enroll__security">
-                Wszystkie adresy dopisane do listy mailingowej wykorzystywane są wyłącznie w celu
-                wysłania jednorazowej notyfkacji. Żadne dane użytkowników nie są przekazywane osobom trzecim.
-            </p>
+                </form>
+            </div>
+            <div class="enroll__security">
+                <p>Wszystkie adresy dopisane do listy mailingowej wykorzystywane są wyłącznie w celu
+                wysłania jednorazowej notyfkacji.</p>
+                <p>Żadne dane użytkowników nie są przekazywane osobom trzecim.</p>
+            </div>
         </section>
-        <section id="zespół" class="team">
+        <section id="team" class="team">
             <h1>Kim jesteśmy</h1>
             <div class="team__profiles">
                 <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Magda.png" alt="Magda Łazarska">
-                    </figure>
+                    <figure class="team__photo magda"></figure>
                     <h2 class="team__name">Magda Łazarska</h2>
-                    <p class="team__description">
+                    <div class="team__description">
                         Fotograf, Geograf, Frontend Developer wannabe. Cmsy, Wordpressy,
-                        Bloggery, Fejsbuki, Istaszki, Tłittery nie są jej obce, bo są pomocne. Kocha podróże bez
-                        all-inclusive
-                        szczególnie po Skandynawii chociaż nie pogardzi też Bałkanami, Bliskim Wschodem, a nawet
-                        Płockiem.
-                    </p>
-                    <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon"
-                                                                          src="assets/img/facebook_icon_black.svg"
-                                                                          alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                                                                        alt="Ikona Github"></a>
-                    </footer>
+                        Bloggery, Fejsbuki, Istaszki, Tłittery nie są jej obce, bo są pomocne. Kocha podróże bez all-inclusive
+                        szczególnie po Skandynawii chociaż nie pogardzi też Bałkanami, Bliskim Wschodem, a nawet Płockiem.
+                    </div>
+                    <div class="team__social">
+                        <a href="#" title="Facebook" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#" title="Github" target="_blank"><span class="fab fa-github"></span></a>
+                    </div>
                 </div>
                 <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Agata.png" alt="Agata Budzińska">
-                    </figure>
+                    <figure class="team__photo agata"></figure>
                     <h2 class="team__name">Agata Budzińska</h2>
-                    <p class="team__description">
-                        Fanatyczna miłośniczka kotów i gołębi, dobrego jedzenia, Skandynawii, entuzjastka kina (w tym
-                        oczywiście
-                        produkcji spod skrzydeł Marvel Studios).
-                    </p>
-                    <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon"
-                                                                          src="assets/img/facebook_icon_black.svg"
-                                                                          alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                                                                        alt="Ikona Github"></a>
-                    </footer>
+                    <div class="team__description">
+                        Fanatyczna miłośniczka kotów i gołębi, smakoszka dobrej kuchni, wielbicielka Skandynawii i Islandii. Entuzjastka
+                        kina, minimalizmu i polskiego designu. W następnym życiu zostanie lekarzem, chemikiem, szalonym naukowcem
+                        lub... ornitologiem.
+                    </div>
+                    <div class="team__social">
+                        <a href="https://www.facebook.com/agata.budzinska.14" title="Facebook" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                        <a href="https://github.com/bufetova" title="Github" target="_blank"><span class="fab fa-github"></span></a>
+                    </div>
                 </div>
                 <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Kuba.png" alt="Jakub Wypijewski">
-                    </figure>
-                    <h2 class="team__name">Jakub Wypijewski</h2>
-                    <p class="team__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. <br><br>
-                        Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon"
-                                                                          src="assets/img/facebook_icon_black.svg"
-                                                                          alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                                                                        alt="Ikona Github"></a>
-                    </footer>
-                </div>
-                <div class="team__member">
-                    <figure class="team__photo">
-                        <img src="assets/img/Piotrek.png" alt="Piotr Nowosławski">
-                    </figure>
+                    <figure class="team__photo piotrek"></figure>
                     <h2 class="team__name">Piotr Nowosławski</h2>
-                    <p class="team__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <footer class="team__social">
-                        <a href="#" title="Facebook" target="_blank"><img class="social__icon"
-                                                                          src="assets/img/facebook_icon_black.svg"
-                                                                          alt="Ikona Facebook"></a>
-                        <a href="#" title="Github" target="_blank"><img class="social__icon" src="assets/img/github.svg"
-                                                                        alt="Ikona Github"></a>
-                    </footer>
+                    <div class="team__description">
+                        Od ponad dziesięciu lat doświadczony wyjadacz branży finansowej w sektorze przedsiębiorstw, prywatnie wyznawca wspinaczki, alpinizmu i walki z grawitacją. Najlepiej czuje się pośród skał i pionowych ścian.
+                    </div>
+                    <div class="team__social">
+                        <a href="https://www.facebook.com/piotr.gdynia.37" title="Facebook" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                        <a href="https://github.com/piotrnowoslawski" title="Github" target="_blank"><span class="fab fa-github"></span></a>
+                    </div>
                 </div>
             </div>
         </section>
         <footer class="footer">
             <a href="#" title="Facebook" target="_blank"><img class="footer__icon" src="assets/img/facebook_icon.svg"
-                                                              alt="Ikona Facebook"></a>
+            alt="Ikona Facebook"></a>
             <a href="#" title="Twitter" target="_blank"><img class="footer__icon" src="assets/img/instagram_icon.svg"
-                                                             alt="Ikona Twitter"></a>
+            alt="Ikona Twitter"></a>
             <a href="#" title="Instagram" target="_blank"><img class="footer__icon" src="assets/img/twitter_icon.svg"
-                                                               alt="Ikona Instagram"></a>
+            alt="Ikona Instagram"></a>
             <p class="footer__caption">&copy; 2018 apt get marvel</p>
         </footer>
     </div>
