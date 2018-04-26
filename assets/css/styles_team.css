@@ -3,7 +3,7 @@
 .team {
     background-color: #ffffff;
     padding-top: 150px;
-    margin-bottom: 100px;
+    padding-bottom: 150px;
 }
 
 .team__profiles {
@@ -21,7 +21,7 @@
 .team__member {
     width: 450px;
     text-align: center;
-    position: relative;
+    /*position: relative;*/
     margin-top: 30px;
 }
 
@@ -144,21 +144,20 @@
     text-align: center;
     font-size: 18px;
     padding-top: 15px;
-    height: 190px;
+    position: relative;
 }
 
 @media (min-width: 768px) {
     .team__description {
         border-top: none;
+        height: 130px;
     }
 }
 
 .team__social {
-    position: absolute;
-    bottom: 0;
+    padding-top: 10px;
     left: 45%;
 }
-
 
 .fa-facebook-f, .fa-github {
     color: black;
