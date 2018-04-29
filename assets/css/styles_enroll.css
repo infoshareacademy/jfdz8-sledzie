@@ -3,8 +3,15 @@
 .enroll {
     background-color: #f2f2f2;
     text-align: center;
-    height: 700px;
+    height: 600px;
+    padding-bottom: 100px;
     padding-top: 100px;
+}
+
+@media (min-width: 768px) {
+    .enroll {
+        height: 700px;
+    }
 }
 
 .enroll__info {
@@ -19,11 +26,23 @@
 }
 
 .enroll__info h1 {
-    font-size: 38px;
+    font-size: 22px;
+}
+
+@media (min-width: 768px) {
+    .enroll__info h1 {
+        font-size: 38px;
+    }
 }
 
 .enroll__info h2 {
-    font-size: 30px;
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    .enroll__info h2 {
+        font-size: 38px;
+    }
 }
 
 .enroll__info h1, h2 {
@@ -31,7 +50,13 @@
 }
 
 .enroll__form {
-    height: 100px;
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    .enroll__form {
+        height: 100px;
+    }
 }
 
 form {
@@ -46,22 +71,29 @@ form {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 0;
+}
+
+@media (min-width: 768px) {
+    form {
+        padding-top: 40px;
+    }
 }
 
 .enroll__email {
-    width: 45%;
+    width: 50%;
     height: 40px;
     border-radius: 30px 0 0 30px;
     text-align: center;
     border: 1px solid #000000;
     border-right: 0;
-    font-size: 13px;
+    font-size: 9px;
 }
 
 @media (min-width: 768px) {
     .enroll__email {
         width: 35%;
+        font-size: 13px;
     }
 }
 
@@ -106,5 +138,11 @@ form {
 }
 
 .enroll__security p {
-    font-size: 13px;
+    font-size: 9px;
+}
+
+@media (min-width: 768px) {
+    .enroll__security p {
+        font-size: 13px;
+    }
 }
