@@ -35,7 +35,7 @@
 }
 
 .team__photo.magda {
-    background-image: url('../img/magda_img');
+    background-image: url('../img/magda_img.jpg');
 }
 
 .team__photo.agata {
@@ -65,7 +65,7 @@
     }
 
     .team__photo.magda::after {
-        background-image: url('../img/magda_img');
+        background-image: url('../img/magda_img.jpg');
         background-size: cover;
         border-radius: 50%;
     }
