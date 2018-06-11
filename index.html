@@ -10,24 +10,25 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styles_enroll.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles_team.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles_footer.css">
-    <link rel="stylesheet" href="assets/css/styles_cookies.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles_cookies.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles_active.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i&amp;subset=latin-ext" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <main>
-    <div class="container" id="start">
+    <section id="start" class="container active">
         <nav class="navigation">
             <button class="hamburger" title="Otwórz menu">&#9776;</button>
             <button class="cross" title="Zamknij menu">&#x2716;</button>
-            <a href="#start">
+            <a href="#">
                 <img class="logo" src="assets/img/logo.png" alt="Logo strony"/>
             </a>
             <ul class="navigation-list">
-                <li><a class="navigation-list__item" href="#start" title="Powrót do początku strony">start</a></li>
+                <li><a class="navigation-list__item active" href="#start" title="Powrót do początku strony">start</a></li>
                 <li><a class="navigation-list__item" href="#project" title="Opis i funkcja projektu">projekt</a></li>
-                <li><a class="navigation-list__item" href="#sign-up" title="Nie przegap daty premiery">zapisz się</a></li>
                 <li><a class="navigation-list__item" href="#details" title="Poznaj funkcjonalności aplikacji">szczegóły</a></li>
+                <li><a class="navigation-list__item" href="#sign-up" title="Nie przegap daty premiery">zapisz się</a></li>
                 <li><a class="navigation-list__item" href="#team" title="O twórcach">zespół</a></li>
             </ul>
         </nav>
@@ -105,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-container" id="details">
+        <section id="details" class="section-container">
             <div class="details-container">
                 <h1>Technologiczny geniusz i nadzwyczajna moc naszej aplikacji</h1>
                 <ul class="details-list">
@@ -191,11 +192,12 @@
             alt="Ikona Twitter"></a>
             <p class="footer__caption">&copy; 2018 apt get marvel</p>
         </footer>
-    </div>
+    </section>
 </main>
 <script src="assets/js/script_cookies.js"></script>
 <script src="assets/js/script_navigation.js"></script>
 <script src="assets/js/script_slider.js"></script>
+<script src="assets/js/script_navigation_active.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
         integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
         crossorigin="anonymous"></script>

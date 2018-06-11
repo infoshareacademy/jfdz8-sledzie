@@ -1,0 +1,15 @@
+.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+li a {
+    display: block;
+    padding: 2.16rem 2rem;
+    color: #000;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    float: left;
+    cursor: pointer;
+}
