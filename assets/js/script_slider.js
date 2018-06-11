@@ -1,29 +1,63 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+var carousel = function carousel() {
+    var slidePhoto = document.getElementsByClassName("slide-photo-box");
+    var slideMiniature = document.getElementsByClassName('.slider-image');
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
+    function slidePhotos() {
+        for (var i = 1; i < slidePhoto.length; i++) {
+            slidePhoto[i].style.display = "none";
+        }
 
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-    var i;
-    var slideFoto = document.getElementsByClassName("slide-photo-box");
-    var dots = document.getElementsByClassName("slider-image");
-    if (n > slideFoto.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slideFoto.length}
-    for (i = 0; i < slideFoto.length; i++) {
-        slideFoto[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" slider-image-miniature", "");
-    }
-    slideFoto[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " slider-image-miniature";
-}
+    slidePhotos();
+};
+
+carousel();
+
+
+
+
+
+
+
+
+
+
+// var slideIndex = 1;
+// showPhotos(slideIndex);
+//
+// function currentDiv(num) {
+//     showPhotos(slideIndex = num);
+// }
+//
+// function showPhotos(num) {
+//     var slidePhoto = document.getElementsByClassName("slide-photo-box");
+//     var slideMiniature = document.getElementsByClassName("slider-image");
+//     if (num > slidePhoto.length) {slideIndex = 0}
+//     if (num < 1) {slideIndex = slidePhoto.length}
+//     for (var i = 0; i < slidePhoto.length; i++) {
+//         slidePhoto[i].style.display = "none";
+//     }
+//     for (i = 0; i < slideMiniature.length; i++) {
+//         slideMiniature[i].className = slideMiniature[i].className.replace(" slider-image-miniature", "");
+//     }
+//     slidePhoto[slideIndex-1].style.display = "block";
+//     slideMiniature[slideIndex-1].className += " slider-image-miniature";
+// }
+
+// carousel();
+//
+// function carousel() {
+//     var slidePhoto = document.getElementsByClassName("slide-photo-box");
+//     slideIndex++;
+//     for (var i = 0; i < slidePhoto.length; i++) {
+//         slidePhoto[i].style.display = "none";
+//     }
+//     if (slideIndex > slidePhoto.length) {slideIndex = 1}
+//     slidePhoto[slideIndex -1].style.display = "block";
+//     setInterval(carousel, 5000);
+// }
+
+
 
 
 $(".box1").hover(function() {
