@@ -7,8 +7,6 @@ function handleNavigationEffect() {
         $navigation.removeClass('navigation-scroll');
 }
 
-
-
 // function handleNavigationEffect() {
 //     const scrollThreshold = 50;
 //     const navigation = document.querySelector('.navigation');
