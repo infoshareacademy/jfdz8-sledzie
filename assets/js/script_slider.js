@@ -1,61 +1,29 @@
 var carousel = function carousel() {
-    var slidePhoto = document.getElementsByClassName("slide-photo-box");
-    var slideMiniature = document.getElementsByClassName('.slider-image');
 
-    function slidePhotos() {
-        for (var i = 1; i < slidePhoto.length; i++) {
-            slidePhoto[i].style.display = "none";
+    var slideMiniatures = [];
+    var slidePhotos = document.getElementsByClassName('slide-photo-box');
+    var slidePhoto = document.getElementsByClassName('slide-photo');
+
+    for (var i = 0; i < slidePhotos.length; i++) {
+        if (slidePhotos[i].parentNode.className === 'slider-photos') {
+                slideMiniatures.push(slidePhotos[i]);
         }
-
     }
-    slidePhotos();
-};
 
+    for (var j = 0; j < slideMiniatures.length; j++) {
+        slideMiniatures[j].addEventListener('click', function(event) {
+            for (var z = 0; z < slidePhoto.length; z++) {
+                slidePhoto[z].style.display = 'none';
+            }
+            event.target.slidePhoto[z].style.display = 'block';
+        })
+    }
+
+    slideMiniatures[0].click();
+
+};
 carousel();
 
-
-
-
-
-
-
-
-
-
-// var slideIndex = 1;
-// showPhotos(slideIndex);
-//
-// function currentDiv(num) {
-//     showPhotos(slideIndex = num);
-// }
-//
-// function showPhotos(num) {
-//     var slidePhoto = document.getElementsByClassName("slide-photo-box");
-//     var slideMiniature = document.getElementsByClassName("slider-image");
-//     if (num > slidePhoto.length) {slideIndex = 0}
-//     if (num < 1) {slideIndex = slidePhoto.length}
-//     for (var i = 0; i < slidePhoto.length; i++) {
-//         slidePhoto[i].style.display = "none";
-//     }
-//     for (i = 0; i < slideMiniature.length; i++) {
-//         slideMiniature[i].className = slideMiniature[i].className.replace(" slider-image-miniature", "");
-//     }
-//     slidePhoto[slideIndex-1].style.display = "block";
-//     slideMiniature[slideIndex-1].className += " slider-image-miniature";
-// }
-
-// carousel();
-//
-// function carousel() {
-//     var slidePhoto = document.getElementsByClassName("slide-photo-box");
-//     slideIndex++;
-//     for (var i = 0; i < slidePhoto.length; i++) {
-//         slidePhoto[i].style.display = "none";
-//     }
-//     if (slideIndex > slidePhoto.length) {slideIndex = 1}
-//     slidePhoto[slideIndex -1].style.display = "block";
-//     setInterval(carousel, 5000);
-// }
 
 
 
