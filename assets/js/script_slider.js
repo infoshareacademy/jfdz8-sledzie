@@ -22,10 +22,21 @@
 (function () {
     var slideMiniatures = document.querySelectorAll('.slider-item');
     var index = 0;
-    setInterval(function () {
+    var carouselInterval = setInterval(function () {
         index = (index + 1) % slideMiniatures.length;
         slideMiniatures[index].click()
-    }, 5000)
+    }, 5000);
+
+    function stopCarousel () {
+        for (var i = 0; i < slideMiniatures.length; i++) {
+            slideMiniatures[i].addEventListener('click', function () {
+                return clearInterval(carouselInterval);
+            })
+        }
+    }
+    stopCarousel();
+
+
 }());
 
 
