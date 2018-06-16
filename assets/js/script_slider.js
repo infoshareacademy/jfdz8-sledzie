@@ -1,29 +1,33 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+(function () {
+    var slideMiniatures = document.querySelectorAll('.slider-item');
+    var slidePhotos = document.querySelectorAll('.slide-photo');
+    var index = 0;
+    var carouselInterval = setInterval(function () {
+        index = (index + 1) % slideMiniatures.length;
+        activateSlide(index)
+    }, 5000);
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
+    slideMiniatures.forEach(function (item, index) {
+        item.addEventListener('click', makeClickHandler(index));
+    });
 
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-}
+    activateSlide(index);
 
-function showDivs(n) {
-    var i;
-    var slideFoto = document.getElementsByClassName("slide-photo-box");
-    var dots = document.getElementsByClassName("slider-image");
-    if (n > slideFoto.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slideFoto.length}
-    for (i = 0; i < slideFoto.length; i++) {
-        slideFoto[i].style.display = "none";
+    function activateSlide(index) {
+        slidePhotos.forEach(function (photo) {
+            photo.style.display = 'none';
+        });
+
+        slidePhotos[index].style.display = 'block';
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" slider-image-miniature", "");
+
+    function makeClickHandler(index) {
+        return function () {
+            activateSlide(index);
+            clearInterval(carouselInterval);
+        }
     }
-    slideFoto[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " slider-image-miniature";
-}
+}());
 
 
 $(".box1").hover(function() {
