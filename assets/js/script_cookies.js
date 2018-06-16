@@ -1,4 +1,4 @@
-var cookiesInitialize = function() {
+var cookiesInitialize = function () {
     var container = document.createElement('div');
     var link = document.createElement('a');
     var hulkContainer = document.createElement('div');
