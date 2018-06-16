@@ -4,6 +4,7 @@
     background-color: #ffffff;
     padding-top: 150px;
     padding-bottom: 150px;
+    min-height: 100vh;
 }
 
 .team__profiles {

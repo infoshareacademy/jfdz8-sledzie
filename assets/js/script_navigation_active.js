@@ -1,21 +1,16 @@
 (function () {
-    var allAnchors = document.querySelectorAll('[href^=#]');
-    var selector = anchor.getAttribute('href');
+    var allAnchors = document.querySelectorAll('.navigation-list [href^="#"]');
     var getElemDistances = [];
-    var offsets = [];
 
-    allAnchors.forEach(function () {
-        anchor.getAttribute('href');
-        var getElemDistance = document.querySelector(selector);
-        getElemDistances.push(getElemDistance);
+    allAnchors.forEach(function (anchor) {
+        var selector = anchor.getAttribute('href');
+        try {
+            var getElemDistance = document.querySelector(selector);
+            getElemDistances.push(getElemDistance);
+        } catch (e) {
+            //skip
+        }
     });
-
-
-    offsets = getElemDistances.map(function (getElemDistance) {
-        return getElemDistance.offsetTop;
-    });
-
-
 
     window.addEventListener('scroll', function() {
         var offset = window.pageYOffset;
@@ -26,6 +21,13 @@
             } else {
                 classList.remove('active');
             }
+        })
+
+        document.querySelectorAll('.active').forEach(function (element, index, allElements) {
+            if (index === allElements.length - 1) {
+                return;
+            }
+            element.classList.remove('active')
         })
     });
 
