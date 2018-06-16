@@ -2,13 +2,10 @@ function handleNavigationEffect() {
     const scrollThreshold = 50;
     const $navigation = $('.navigation');
 
-    // console.log(this.scrollY, $(this).scrollTop());
     $(this).scrollTop() > scrollThreshold ?
         $navigation.addClass('navigation-scroll') :
         $navigation.removeClass('navigation-scroll');
 }
-
-
 
 // function handleNavigationEffect() {
 //     const scrollThreshold = 50;
