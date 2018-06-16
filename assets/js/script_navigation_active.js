@@ -27,7 +27,7 @@
             if (index === allElements.length - 1) {
                 return;
             }
-            element.classList.remove('active')
+            element.classList.remove('active');
         })
     });
 
