@@ -222,6 +222,10 @@
         color: #fff;
         transition: 0.5s ease-in;
     }
+    .active {
+        color: #ffffff;
+        background-color: #ff0000;
+    }
     .slider {
         background: #000;
     }

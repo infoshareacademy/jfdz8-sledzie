@@ -21,7 +21,7 @@
             } else {
                 classList.remove('active');
             }
-        })
+        });
 
         document.querySelectorAll('.active').forEach(function (element, index, allElements) {
             if (index === allElements.length - 1) {
