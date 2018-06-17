@@ -1,4 +1,4 @@
-var cookiesInitialize = function() {
+var cookiesInitialize = function () {
     var container = document.createElement('div');
     var link = document.createElement('a');
     var hulkContainer = document.createElement('div');
@@ -11,7 +11,7 @@ var cookiesInitialize = function() {
     link.title = 'Zamknij';
     link.innerHTML = 'x';
 
-    function clickHandler(e) {
+    function clickHandler() {
 
         document.body.removeChild(hulkContainer);
         document.body.removeChild(container);

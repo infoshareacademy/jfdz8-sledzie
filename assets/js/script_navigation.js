@@ -21,7 +21,7 @@ $(window).on('scroll', handleNavigationEffect);
 
 var handlersAreSet = false;
 
-var setHandlers = function() {
+var setHandlers = function () {
     if ($(window).width() < 961) {
         $(".hamburger").click(function () {
             $('.navigation-list').slideToggle().addClass('navigation-expanded');
@@ -40,13 +40,13 @@ var setHandlers = function() {
                 $('.navigation-list').slideUp().removeClass('navigation-expanded');
                 $(".cross").hide();
                 $(".hamburger").show();
-            };
+            }
         });
         handlersAreSet = true;
     }
 };
 
-$(window).resize(function() {
+$(window).resize(function () {
     if (handlersAreSet === false) {
         setHandlers();
     }
@@ -58,12 +58,12 @@ $(window).resize(function() {
 
 setHandlers();
 
-$(document).ready(function() {
-    $('a[href^="#"]').on('click', function(event) {
+$(document).ready(function () {
+    $('a[href^="#"]').on('click', function (event) {
 
-        var target = $( $(this).attr('href') );
+        var target = $($(this).attr('href'));
 
-        if( target.length ) {
+        if (target.length) {
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top
