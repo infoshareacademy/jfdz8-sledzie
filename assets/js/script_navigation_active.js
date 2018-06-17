@@ -1,12 +1,12 @@
 (function () {
     var allAnchors = document.querySelectorAll('.navigation-list [href^="#"]');
-    var getElemDistances = [];
+    var sections = [];
 
     allAnchors.forEach(function (anchor) {
         var selector = anchor.getAttribute('href');
         try {
-            var getElemDistance = document.querySelector(selector);
-            getElemDistances.push(getElemDistance);
+            var section = document.querySelector(selector);
+            sections.push(section);
         } catch (e) {
             //skip
         }
@@ -14,9 +14,9 @@
 
     window.addEventListener('scroll', function() {
         var offset = window.pageYOffset;
-        getElemDistances.forEach(function (getElemDistance, index) {
+        sections.forEach(function (section, index) {
             var classList = allAnchors[index].classList;
-            if (getElemDistance.offsetTop <= offset) {
+            if (getElemDistance(section) <= offset) {
               classList.add('active');
             } else {
                 classList.remove('active');
@@ -27,7 +27,7 @@
             if (index === allElements.length - 1) {
                 return;
             }
-            element.classList.remove('active')
+            element.classList.remove('active');
         })
     });
 
