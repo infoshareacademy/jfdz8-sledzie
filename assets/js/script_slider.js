@@ -30,20 +30,20 @@
 }());
 
 
-$(".box1").hover(function() {
-    $(".show1").slideDown(500);
+$(".js-box1").hover(function() {
+    $(".js-show1").slideDown(500);
 }, function() {
-    $(".show1").slideUp(500);
+    $(".js-show1").slideUp(500);
 });
 
-$(".box2").hover(function() {
-    $(".show2").slideDown(500);
+$(".js-box2").hover(function() {
+    $(".js-show2").slideDown(500);
 }, function() {
-    $(".show2").slideUp(500);
+    $(".js-show2").slideUp(500);
 });
 
-$(".box3").hover(function() {
-    $(".show3").slideDown(500);
+$(".js-box3").hover(function() {
+    $(".js-show3").slideDown(500);
 }, function() {
-    $(".show3").slideUp(500);
+    $(".js-show3").slideUp(500);
 });
