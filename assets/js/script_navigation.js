@@ -41,7 +41,6 @@ var setHandlers = function () {
                 $(".cross").hide();
                 $(".hamburger").show();
             }
-            ;
         });
         handlersAreSet = true;
     }
