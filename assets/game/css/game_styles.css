@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    text-align: center;
+}
+#app {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    flex-basis: 14%;
+    height: 30vh;
+    /*width: 180px;*/
+    /*height: 220px;*/
+    margin: 5px;
+    border: 1px solid black;
+}
+.cardObverse {
+    background: url("../img/card_obverse.png") no-repeat;
+    background-size: 100% auto;
+}
+.hulk {
+    background: url("../img/hulk.png") no-repeat;
+
+}
+.spiderman {
+    background: url("../img/spiderman.png") no-repeat;
+
+}
+.batman {
+    background: url("../img/batman.png") no-repeat;
+
+}
+.superman {
+    background: url("../img/superman.png") no-repeat;
+
+}
+.flash {
+    background: url("../img/flash.png") no-repeat;
+
+}
+.deadpool {
+    background: url("../img/deadpool.png") no-repeat;
+
+}
+.ironman {
+    background: url("../img/ironman.png") no-repeat;
+
+}
+.captainamerica {
+    background: url("../img/captainamerica.png") no-repeat;
+
+}
+.wolverine {
+    background: url("../img/wolverine.png") no-repeat;
+
+}
+.hidden {
+
+}
+@media (orientation: portrait) {
+    .cardObverse {
+        flex-basis: 30%;
+    }
+}
