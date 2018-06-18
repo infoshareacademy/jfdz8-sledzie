@@ -6,36 +6,36 @@ for (var i = 0; i < 16; i++) {
     container.appendChild(boardElements);
 }
 
+var cards = document.querySelectorAll(".board-element");
+
+var cardIndex;
 var cardsColors = ["grey", "grey","red", "red", "blue", "blue",
     "yellow", "yellow", "pink", "pink", "green", "green", "violet", "violet", "orange", "orange"];
 
-var cards = document.querySelectorAll(".board-element");
-
 function shuffle () {
     cards.forEach(function (card) {
-        var position = Math.floor(Math.random() * cardsColors.length);
-        card.classList.add(cardsColors[position]);
-        cardsColors.splice(position, 1);
+        cardIndex = Math.floor(Math.random() * cardsColors.length);
+        card.classList.add(cardsColors[cardIndex]);
+        cardsColors.splice(cardIndex, 1);
     })
 }
-//
-// function clickCard () {
-//     cards.forEach(function (card) {
-//         card.classList.remove("hidden")
-//     });
-// }
-//
-// function onClick() {
-//     cards.addEventListener("click", clickCard)
-// }
-//
 
-function reverseCards () {
+function hideCards () {
     cards.forEach(function (card) {
         card.classList.add("hidden")
     });
 }
 
+
+function showCard () {
+    cards.forEach(function (card) {
+        card.addEventListener("click", function () {
+            card.classList.remove("hidden");
+        })
+    })
+}
+
+
 shuffle();
-reverseCards();
-onClick();
+hideCards();
+showCard();
