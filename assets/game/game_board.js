@@ -1,9 +1,9 @@
 var container = document.getElementById("board");
 
 for (var i = 0; i < 16; i++) {
-    var boardElements = document.createElement("div");
-    boardElements.classList.add("board-element");
-    container.appendChild(boardElements);
+    var boardElement = document.createElement("div");
+    boardElement.classList.add("board-element");
+    container.appendChild(boardElement);
 }
 
 var cards = document.querySelectorAll(".board-element");
@@ -11,6 +11,10 @@ var cards = document.querySelectorAll(".board-element");
 var cardIndex;
 var cardsColors = ["grey", "grey","red", "red", "blue", "blue",
     "yellow", "yellow", "pink", "pink", "green", "green", "violet", "violet", "orange", "orange"];
+
+shuffle();
+hideCards();
+showCard();
 
 function shuffle () {
     cards.forEach(function (card) {
@@ -26,7 +30,6 @@ function hideCards () {
     });
 }
 
-
 function showCard () {
     cards.forEach(function (card) {
         card.addEventListener("click", function () {
@@ -36,6 +39,3 @@ function showCard () {
 }
 
 
-shuffle();
-hideCards();
-showCard();
