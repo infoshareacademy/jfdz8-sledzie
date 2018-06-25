@@ -16,8 +16,6 @@ html {
 .card {
     flex-basis: 14%;
     height: 30vh;
-    /*width: 180px;*/
-    /*height: 220px;*/
     margin: 5px;
     border: 1px solid black;
 }
@@ -67,8 +65,9 @@ html {
 
 }
 .cardObverse {
-    background: url("../img/card_obverse.png") no-repeat;
-    background-size: 100% auto;
+    background: url("../img/shield.jpg") no-repeat;
+    background-size: 60% auto;
+    background-position: center;
 }
 .outOfGame {
     opacity: 0.5;
@@ -94,6 +93,15 @@ html {
     color: #fff;
     border: none;
     transition: 0.5s ease-in;
+}
+#difficulty {
+    position: absolute;
+    z-index: 10;
+    right: 30%;
+    bottom: 10px;
+    width: 10%;
+    height: 25px;
+    text-transform: uppercase;
 }
 @media (orientation: portrait) {
     .cardObverse {

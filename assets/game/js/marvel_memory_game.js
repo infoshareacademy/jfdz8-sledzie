@@ -15,6 +15,13 @@ createBoard();
 shuffleCards(cards);
 assignHeroesClasses(cards);
 
+function startGame() {
+    var playPauseButton = document.getElementById('play-pause-button');
+    playPauseButton.addEventListener('click', function () {
+        play();
+    });
+}
+
 function createBoard() {
     var cardsNode;
     for (var i = 0; i < numberOfCards; i += 1) {
