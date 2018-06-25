@@ -1,5 +1,4 @@
 var appNode = document.getElementById('app');
-var cardsNode;
 var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica wolverine '.repeat(2).split(' ');
 cards.pop();
 var cardElements;
@@ -12,19 +11,18 @@ var setStartTimer = new Date().getTime();
 var gameResult = 0;
 var timeResult;
 
+createBoard();
+shuffleCards(cards);
+assignHeroesClasses(cards);
+
 function createBoard() {
+    var cardsNode;
     for (var i = 0; i < numberOfCards; i += 1) {
         cardsNode = document.createElement('div');
-
         appNode.appendChild(cardsNode);
         cardsNode.classList.add('card');
     }
-    shuffleCards(cards);
-    assignHeroesClasses(cards);
-
 }
-
-createBoard();
 
 function shuffleCards(cardsToShuffle) {
     for (var i = cardsToShuffle.length - 1; i > 0; i--) {
@@ -41,16 +39,16 @@ function assignHeroesClasses(classesArray) {
     cardElements.forEach(function (cardElement, index) {
         cardElement.classList.add(classesArray[index]);
     });
-
-    setTimeout(function () {
-        cardElements.forEach(function (cardElement) {
-            cardElement.classList.add('cardObverse');
-            cardElement.addEventListener('click', showCard);
-        })
-    }, 2000)
 }
 
-function showCard() {
+setTimeout(function () {
+    cardElements.forEach(function (cardElement) {
+        cardElement.classList.add('cardObverse');
+        cardElement.addEventListener('click', bindListenersToCards);
+    })
+}, 2000);
+
+function bindListenersToCards() {
     clickedCard = this;
 
     if(clickedCard === selectedCards[0]) return;
@@ -61,7 +59,7 @@ function showCard() {
         return
     } else {
         cardElements.forEach(function (cardElements) {
-            cardElements.removeEventListener('click', showCard);
+            cardElements.removeEventListener('click', bindListenersToCards);
             selectedCards[1] = clickedCard;
         })
     }
@@ -80,7 +78,7 @@ function showCard() {
                 });
                 gameResult = gameResult + 1;
                 cardElements = cardElements.filter(function(cardElement) {
-                    !cardElement.classList.contains('outOfGame');
+                    return !cardElement.classList.contains('outOfGame');
                 });
                 gameOver();
             } else {
@@ -92,7 +90,7 @@ function showCard() {
             clickedCard = '';
             selectedCards = [];
             cardElements.forEach(function(cardElement) {
-                cardElement.addEventListener('click', showCard);
+                cardElement.addEventListener('click', bindListenersToCards);
             })
         }, 1000)
     }
