@@ -6,7 +6,8 @@ var cardElements;
 var numberOfCards = cards.length;
 var clickedCard = '';
 var selectedCards = [];
-var numberOfPairsCards = numberOfCards/2;
+var eliminated;
+var numberOfPairsCards = numberOfCards / 2;
 var timer = new Date().getTime();
 var gameResult = 0;
 
@@ -52,25 +53,38 @@ function showCard() {
     clickedCard = this;
     clickedCard.classList.remove('cardObverse');
 
-    if(selectedCards.length === 0) {
+    if (selectedCards.length === 0) {
         selectedCards[0] = clickedCard;
         return
     } else {
         cardElements.forEach(function (cardElements) {
             cardElements.removeEventListener('click', showCard);
+            selectedCards[1] = clickedCard;
         })
     }
+
+    compareCards();
+
+    function compareCards() {
+        setTimeout(function () {
+            if (selectedCards[0].className === selectedCards[1].className) {
+                console.log('właściwa para');
+                selectedCards.forEach(function (clickedCard) {
+                    clickedCard.classList.add('outOfGame');
+                    eliminated = document.createElement('div');
+                    clickedCard.appendChild(eliminated);
+                    eliminated.classList.add('eliminated');
+                })
+            } else {
+                console.log('pudło');
+                selectedCards.forEach(function (clickedCard) {
+                    clickedCard.classList.add('cardObverse');
+                })
+            }
+        }, 2000)
+    }
+
 }
-
-
-
-
-    // cardElements = document.querySelectorAll('.card');
-    // cardElements.forEach(function (cardElement) {
-    //     cardElement.addEventListener("click", function () {
-    //         cardElement.classList.remove('cardObverse');
-    //     })
-    // })
 
 
 

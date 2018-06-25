@@ -70,6 +70,15 @@ html {
     background: url("../img/card_obverse.png") no-repeat;
     background-size: 100% auto;
 }
+.outOfGame {
+    opacity: 0.5;
+}
+.eliminated {
+    background: url("../img/eliminated.png") no-repeat;
+    background-size: 80% auto;
+    flex-basis: 14%;
+    height: 30vh;
+}
 #play-pause-button {
     position: absolute;
     bottom: 10px;
