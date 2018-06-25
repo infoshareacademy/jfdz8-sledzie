@@ -4,19 +4,18 @@ var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica 
 cards.pop();
 var cardElements;
 var numberOfCards = cards.length;
+var clickedCard = '';
+var selectedCards = [];
 var numberOfPairsCards = numberOfCards/2;
 var timer = new Date().getTime();
-var selectedCards = [];
 var gameResult = 0;
 
 function createBoard() {
     for (var i = 0; i < numberOfCards; i += 1) {
         cardsNode = document.createElement('div');
-        cardBonus = document.createElement('img');
 
         appNode.appendChild(cardsNode);
         cardsNode.classList.add('card');
-        cardsNode.appendChild(cardBonus);
     }
     shuffleCards(cards);
     assignHeroesClasses(cards);
@@ -44,30 +43,36 @@ function assignHeroesClasses(classesArray) {
     setTimeout(function () {
         cardElements.forEach(function (cardElement) {
             cardElement.classList.add('cardObverse');
-            showCard();
+            cardElement.addEventListener('click', showCard);
         })
     }, 2000)
 }
 
 function showCard() {
-    cardElements = document.querySelectorAll('.card');
-    cardElements.forEach(function (cardElement) {
-        cardElement.addEventListener("click", function () {
-            cardElement.classList.remove('cardObverse');
+    clickedCard = this;
+    clickedCard.classList.remove('cardObverse');
+
+    if(selectedCards.length === 0) {
+        selectedCards[0] = clickedCard;
+        return
+    } else {
+        cardElements.forEach(function (cardElements) {
+            cardElements.removeEventListener('click', showCard);
         })
-    })
+    }
 }
 
-function compareCard() {
-
-}
-compareCard();
 
 
-if(selectedCards.length === 0) {
-    selectedCards[0] = showCard();
-} else {
-    cardElements.forEach(function () {
-        cardElements.removeEventListener('click', showCard());
-    })
-}
+
+    // cardElements = document.querySelectorAll('.card');
+    // cardElements.forEach(function (cardElement) {
+    //     cardElement.addEventListener("click", function () {
+    //         cardElement.classList.remove('cardObverse');
+    //     })
+    // })
+
+
+
+
+
