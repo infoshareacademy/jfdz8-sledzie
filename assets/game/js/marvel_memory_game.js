@@ -1,9 +1,13 @@
 var appNode = document.getElementById('app');
 var cardsNode;
-var cardBonus;
-var cards = 'hulk spiderman batman superman flash deadpool ironman captainamerica wolverine '.repeat(2).split(' ');
-var numberOfCards = numberOfCards = cards.length;
-
+var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica wolverine '.repeat(2).split(' ');
+cards.pop();
+var cardElements;
+var numberOfCards = cards.length;
+var numberOfPairsCards = numberOfCards/2;
+var timer = new Date().getTime();
+var selectedCards = [];
+var gameResult = 0;
 
 function createBoard() {
     for (var i = 0; i < numberOfCards; i += 1) {
@@ -11,11 +15,13 @@ function createBoard() {
         cardBonus = document.createElement('img');
 
         appNode.appendChild(cardsNode);
-        cardsNode.classList.add('card', 'cardObverse');
+        cardsNode.classList.add('card');
         cardsNode.appendChild(cardBonus);
-
-        }
     }
+    shuffleCards(cards);
+    assignHeroesClasses(cards);
+
+}
 
 createBoard();
 
@@ -28,23 +34,40 @@ function shuffleCards(cardsToShuffle) {
     }
     return cardsToShuffle;
 }
-shuffleCards(cards);
 
-function firstDraw() {
-    cardsNode.forEach(function() {
-        cardsNode.addEventListener("click", function() {
-            cardsNode.classList.remove('cardObverse');
-            return cards[Math.floor(Math.random()*cards.length)];
+function assignHeroesClasses(classesArray) {
+    cardElements = document.querySelectorAll('.card');
+    cardElements.forEach(function (cardElement, index) {
+        cardElement.classList.add(classesArray[index]);
+    });
 
+    setTimeout(function () {
+        cardElements.forEach(function (cardElement) {
+            cardElement.classList.add('cardObverse');
+            showCard();
+        })
+    }, 2000)
+}
+
+function showCard() {
+    cardElements = document.querySelectorAll('.card');
+    cardElements.forEach(function (cardElement) {
+        cardElement.addEventListener("click", function () {
+            cardElement.classList.remove('cardObverse');
         })
     })
-    }
-
-firstDraw();
-
-function secondDraw(cards) {
-    return cards[Math.floor(Math.random()*cards.length)];
 }
-secondDraw(cards);
+
+function compareCard() {
+
+}
+compareCard();
 
 
+if(selectedCards.length === 0) {
+    selectedCards[0] = showCard();
+} else {
+    cardElements.forEach(function () {
+        cardElements.removeEventListener('click', showCard());
+    })
+}

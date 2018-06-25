@@ -21,48 +21,69 @@ html {
     margin: 5px;
     border: 1px solid black;
 }
-.cardObverse {
-    background: url("../img/card_obverse.png") no-repeat;
-    background-size: 100% auto;
-}
 .hulk {
     background: url("../img/hulk.png") no-repeat;
+    background-size: 100% auto;
 
 }
 .spiderman {
     background: url("../img/spiderman.png") no-repeat;
+    background-size: 100% auto;
 
 }
-.batman {
-    background: url("../img/batman.png") no-repeat;
+.thor {
+    background: url("../img/thor.png") no-repeat;
+    background-size: 100% auto;
 
 }
-.superman {
-    background: url("../img/superman.png") no-repeat;
+.punisher {
+    background: url("../img/punisher.png") no-repeat;
+    background-size: 100% auto;
 
 }
 .flash {
     background: url("../img/flash.png") no-repeat;
+    background-size: 100% auto;
 
 }
 .deadpool {
     background: url("../img/deadpool.png") no-repeat;
+    background-size: 100% auto;
 
 }
 .ironman {
     background: url("../img/ironman.png") no-repeat;
+    background-size: 100% auto;
 
 }
 .captainamerica {
     background: url("../img/captainamerica.png") no-repeat;
+    background-size: 100% auto;
 
 }
 .wolverine {
     background: url("../img/wolverine.png") no-repeat;
+    background-size: 100% auto;
 
 }
-.hidden {
-
+.cardObverse {
+    background: url("../img/card_obverse.png") no-repeat;
+    background-size: 100% auto;
+}
+#play-pause-button {
+    position: absolute;
+    bottom: 10px;
+    margin: auto;
+    width: 10%;
+    height: 25px;
+    border: 2px solid #000;
+    text-transform: uppercase;
+}
+#play-pause-button:hover {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    transition: 0.5s ease-in;
 }
 @media (orientation: portrait) {
     .cardObverse {
