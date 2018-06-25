@@ -77,7 +77,7 @@ function bindListenersToCards() {
                     eliminated.classList.add('eliminated');
                 });
                 gameResult = gameResult + 1;
-                cardElements = cardElements.filter(function(cardElement) {
+                cardElements = Array.from(cardElements).filter(function(cardElement) {
                     return !cardElement.classList.contains('outOfGame');
                 });
                 gameOver();
