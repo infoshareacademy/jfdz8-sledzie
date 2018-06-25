@@ -81,7 +81,12 @@ function showCard() {
                     clickedCard.classList.add('cardObverse');
                 })
             }
-        }, 2000)
+            clickedCard = '';
+            selectedCards = [];
+            cardElements.forEach(function(cardElement) {
+                cardElement.addEventListener('click', showCard);
+            })
+        }, 1000)
     }
 
 }
