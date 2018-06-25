@@ -8,8 +8,9 @@ var clickedCard = '';
 var selectedCards = [];
 var eliminated;
 var numberOfPairsCards = numberOfCards / 2;
-var timer = new Date().getTime();
+var setStartTimer = new Date().getTime();
 var gameResult = 0;
+var timeResult;
 
 function createBoard() {
     for (var i = 0; i < numberOfCards; i += 1) {
@@ -74,7 +75,10 @@ function showCard() {
                     eliminated = document.createElement('div');
                     clickedCard.appendChild(eliminated);
                     eliminated.classList.add('eliminated');
-                })
+                });
+                gameResult = gameResult + 1;
+                gameOver();
+                playerResult();
             } else {
                 console.log('pudło');
                 selectedCards.forEach(function (clickedCard) {
@@ -88,7 +92,20 @@ function showCard() {
             })
         }, 1000)
     }
+}
 
+function gameOver() {
+    if (gameResult === numberOfPairsCards) {
+        console.log('GAME OVER');
+    }
+}
+
+function playerResult() {
+    var gameOverTime = new Date().getTime();
+    var gameTime = (gameOverTime - setStartTimer)/1000;
+    timeResult = 'Twój wynik to: ' + gameTime;
+    console.log(timeResult);
+    alert('Czas gry ' + gameTime);
 }
 
 
