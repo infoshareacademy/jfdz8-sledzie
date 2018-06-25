@@ -52,6 +52,8 @@ function assignHeroesClasses(classesArray) {
 
 function showCard() {
     clickedCard = this;
+
+    if(clickedCard === selectedCards[0]) return;
     clickedCard.classList.remove('cardObverse');
 
     if (selectedCards.length === 0) {
@@ -77,8 +79,10 @@ function showCard() {
                     eliminated.classList.add('eliminated');
                 });
                 gameResult = gameResult + 1;
+                cardElements = cardElements.filter(function(cardElement) {
+                    !cardElement.classList.contains('outOfGame');
+                });
                 gameOver();
-                playerResult();
             } else {
                 console.log('pudło');
                 selectedCards.forEach(function (clickedCard) {
@@ -97,6 +101,7 @@ function showCard() {
 function gameOver() {
     if (gameResult === numberOfPairsCards) {
         console.log('GAME OVER');
+        playerResult();
     }
 }
 
