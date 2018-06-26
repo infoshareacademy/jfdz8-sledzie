@@ -141,7 +141,10 @@ function playerResult() {
 function helpThanos() {
         appNode.appendChild(thanos);
         thanos.classList.add('welcomeThanos');
-        thanos.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynięCiebie bogatym i sławnym. Naciśniej "PLAY" i rozwal ich wszystkich znajdując pary!';
+        var thanosWords = document.createElement('div');
+        thanos.appendChild(thanosWords);
+        thanosWords.classList.add('thanosGreating');
+        thanosWords.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynię Ciebie bogatym i sławnym. Naciśniej "PLAY" i rozwal ich wszystkich znajdując pary tych słabełuszy!';
 }
 
 

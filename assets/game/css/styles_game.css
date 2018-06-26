@@ -24,6 +24,12 @@ html {
     background: url("../img/thanos.png") no-repeat;
     background-size: 100% auto;
 }
+.thanosGreating {
+    position: relative;
+    z-index: 9;
+    top: 10%;
+    left: -140%;
+}
 .card {
     flex-basis: 14%;
     height: 29vh;
@@ -93,7 +99,7 @@ html {
 #play-pause-button {
     position: absolute;
     z-index: 10;
-    bottom: 10px;
+    bottom: 20px;
     width: 10%;
     height: 25px;
     border: 2px solid #000;
@@ -104,7 +110,7 @@ html {
     position: absolute;
     z-index: 10;
     right: 30%;
-    bottom: 10px;
+    bottom: 20px;
     width: 10%;
     height: 25px;
     text-transform: uppercase;
@@ -114,7 +120,7 @@ html {
     position: absolute;
     z-index: 10;
     right: 15%;
-    bottom: 10px;
+    bottom: 20px;
     width: 10%;
     height: 25px;
     border: 2px solid #000;
