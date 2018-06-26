@@ -1,4 +1,5 @@
 var appNode = document.getElementById('app');
+var thanos = document.createElement('div');
 var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica wolverine '.repeat(2).split(' ');
 cards.pop();
 var cardElements;
@@ -11,12 +12,15 @@ var setStartTimer = new Date().getTime();
 var gameResult = 0;
 var timeResult;
 
+helpThanos();
 startGame();
 resetGame();
 
 function startGame() {
     var playPauseButton = document.getElementById('play-pause-button');
     playPauseButton.addEventListener('click', function () {
+        thanos.classList.remove('welcomeThanos');
+        thanos.innerHTML = 'Eliminuj bohaterów znajdując te same pary kart!';
         if (cardElements === undefined) {
             createBoard();
             shuffleCards(cards);
@@ -134,6 +138,11 @@ function playerResult() {
     alert('Czas gry ' + gameTime);
 }
 
+function helpThanos() {
+        appNode.appendChild(thanos);
+        thanos.classList.add('welcomeThanos');
+        thanos.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynięCiebie bogatym i sławnym. Naciśniej "PLAY" i rozwal ich wszystkich znajdując pary!';
+}
 
 
 
