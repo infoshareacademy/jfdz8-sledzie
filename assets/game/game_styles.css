@@ -15,7 +15,6 @@
 }
 
 .board-element {
-    flex-grow: 1;
     height: 125px;
     width: 125px;
 }
@@ -54,4 +53,8 @@
 
 .hidden {
     background-color: #000000;
+}
+
+.pair {
+    opacity: 0.5;
 }
