@@ -11,16 +11,29 @@ var setStartTimer = new Date().getTime();
 var gameResult = 0;
 var timeResult;
 
-createBoard();
-shuffleCards(cards);
-assignHeroesClasses(cards);
-bindListenersToCards();
+startGame();
+resetGame();
 
 function startGame() {
     var playPauseButton = document.getElementById('play-pause-button');
     playPauseButton.addEventListener('click', function () {
-        play();
+        if (cardElements === undefined) {
+            createBoard();
+            shuffleCards(cards);
+            assignHeroesClasses(cards);
+            bindListenersToCards();
+        } else {
+            return alert('Jeśli chcesz zagrać od nowa, naciśniej przycisk "RESET"');
+        }
     });
+
+}
+
+function resetGame() {
+    var resetButton = document.getElementById('reset');
+    resetButton.addEventListener('click', function () {
+        location.reload();
+    })
 }
 
 function createBoard() {
