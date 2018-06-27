@@ -31,7 +31,6 @@ function startGame() {
             return alert('Jeśli chcesz zagrać od nowa, naciśniej przycisk "RESET"');
         }
     });
-
 }
 
 function initResetGameControls() {
