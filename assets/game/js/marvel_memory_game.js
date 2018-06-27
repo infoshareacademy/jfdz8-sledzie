@@ -90,37 +90,36 @@ function showCards() {
             selectedCards[1] = clickedCard;
         })
     }
-
     compareCards();
+}
 
-    function compareCards() {
-        setTimeout(function () {
-            if (selectedCards[0].className === selectedCards[1].className) {
-                console.log('właściwa para');
-                selectedCards.forEach(function (clickedCard) {
-                    clickedCard.classList.add('outOfGame');
-                    eliminated = document.createElement('div');
-                    clickedCard.appendChild(eliminated);
-                    eliminated.classList.add('eliminated');
-                });
-                gameResult = gameResult + 1;
-                cardElements = Array.from(cardElements).filter(function (cardElement) {
-                    return !cardElement.classList.contains('outOfGame');
-                });
-                gameOver();
-            } else {
-                console.log('pudło');
-                selectedCards.forEach(function (clickedCard) {
-                    clickedCard.classList.add('cardObverse');
-                })
-            }
-            clickedCard = '';
-            selectedCards = [];
-            cardElements.forEach(function (cardElement) {
-                cardElement.addEventListener('click', showCards);
+function compareCards() {
+    setTimeout(function () {
+        if (selectedCards[0].className === selectedCards[1].className) {
+            console.log('właściwa para');
+            selectedCards.forEach(function (clickedCard) {
+                clickedCard.classList.add('outOfGame');
+                eliminated = document.createElement('div');
+                clickedCard.appendChild(eliminated);
+                eliminated.classList.add('eliminated');
+            });
+            gameResult = gameResult + 1;
+            cardElements = Array.from(cardElements).filter(function (cardElement) {
+                return !cardElement.classList.contains('outOfGame');
+            });
+            gameOver();
+        } else {
+            console.log('pudło');
+            selectedCards.forEach(function (clickedCard) {
+                clickedCard.classList.add('cardObverse');
             })
-        }, 1000)
-    }
+        }
+        clickedCard = '';
+        selectedCards = [];
+        cardElements.forEach(function (cardElement) {
+            cardElement.addEventListener('click', showCards);
+        })
+    }, 1000)
 }
 
 function gameOver() {
