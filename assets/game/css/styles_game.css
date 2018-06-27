@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     width: 100%;
+    border: none;
 }
 html {
     font-family: sans-serif;
     text-align: center;
+    background: #FF0013;
 }
 #app {
     padding: 20px;
@@ -34,58 +36,59 @@ html {
     flex-basis: 14%;
     height: 29vh;
     margin: 5px;
-    border: 1px solid black;
+    border-radius: 5%;
     cursor: pointer;
 }
 .hulk {
     background: url("../img/hulk.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .spiderman {
     background: url("../img/spiderman.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .thor {
     background: url("../img/thor.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .punisher {
     background: url("../img/punisher.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .flash {
     background: url("../img/flash.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .deadpool {
     background: url("../img/deadpool.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .ironman {
     background: url("../img/ironman.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .captainamerica {
     background: url("../img/captainamerica.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .wolverine {
     background: url("../img/wolverine.png") no-repeat;
     background-size: 100% auto;
-
+    background-color: #fff;
 }
 .cardObverse {
     background: url("../img/shield.jpg") no-repeat;
     background-size: 60% auto;
     background-position: center;
+    background-color: #fff;
 }
 .outOfGame {
     opacity: 0.5;
@@ -96,39 +99,41 @@ html {
     flex-basis: 14%;
     height: 30vh;
 }
-#play-pause-button {
+.control-panel {
     position: absolute;
     z-index: 10;
-    bottom: 20px;
-    width: 10%;
+    width: 40%;
+    top: 10px;
+    right: 0;
+    margin-bottom: 20px;
+}
+#play-pause-button {
+    margin-right: 30px;
+    width: 20%;
     height: 25px;
-    border: 2px solid #000;
+    background: #fff;
     text-transform: uppercase;
     cursor: pointer;
+    color: #ff0000;
 }
 #difficulty {
-    position: absolute;
-    z-index: 10;
-    right: 30%;
-    bottom: 20px;
-    width: 10%;
+    margin-right: 30px;
+    width: 20%;
     height: 25px;
     text-transform: uppercase;
     cursor: pointer;
+    color: #ff0000;
 }
 #reset {
-    position: absolute;
-    z-index: 10;
-    right: 15%;
-    bottom: 20px;
-    width: 10%;
+    width: 20%;
     height: 25px;
-    border: 2px solid #000;
+    background: #fff;
     text-transform: uppercase;
     cursor: pointer;
+    color: #ff0000;
 }
 #play-pause-button:hover, #reset:hover {
-    background: #ff0000;
+    background: rgb(0,95,153);
     color: #fff;
     border: none;
     transition: 0.5s ease-in;

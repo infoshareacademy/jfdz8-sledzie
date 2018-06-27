@@ -14,7 +14,7 @@ var timeResult;
 
 helpThanos();
 startGame();
-resetGame();
+initResetGameControls();
 
 function startGame() {
     var playPauseButton = document.getElementById('play-pause-button');
@@ -33,7 +33,7 @@ function startGame() {
 
 }
 
-function resetGame() {
+function initResetGameControls() {
     var resetButton = document.getElementById('reset');
     resetButton.addEventListener('click', function () {
         location.reload();
@@ -144,7 +144,7 @@ function helpThanos() {
         var thanosWords = document.createElement('div');
         thanos.appendChild(thanosWords);
         thanosWords.classList.add('thanosGreating');
-        thanosWords.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynię Ciebie bogatym i sławnym. Naciśniej "PLAY" i rozwal ich wszystkich znajdując pary tych słabełuszy!';
+        thanosWords.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynię Ciebie bogatym i sławnym. Naciśnij "PLAY" i rozwal ich wszystkich znajdując pary tych słabełuszy!';
 }
 
 
