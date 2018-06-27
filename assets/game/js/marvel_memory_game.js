@@ -7,7 +7,6 @@ var numberOfCards = cards.length;
 var clickedCard = '';
 var selectedCards = [];
 var eliminated;
-var numberOfPairsCards = numberOfCards / 2;
 var setStartTimer = new Date().getTime();
 var gameResult = 0;
 var timeResult;
@@ -41,6 +40,7 @@ function initResetGameControls() {
 }
 
 function createBoard() {
+    numberOfCards = addExtraHeroesToChangeGameDifficulty().length;
     var cardsNode;
     for (var i = 0; i < numberOfCards; i += 1) {
         cardsNode = document.createElement('div');
@@ -123,6 +123,7 @@ function compareCards() {
 }
 
 function gameOver() {
+    var numberOfPairsCards = numberOfCards / 2;
     if (gameResult === numberOfPairsCards) {
         console.log('GAME OVER');
         playerResult();
@@ -150,7 +151,7 @@ function addExtraHeroesToChangeGameDifficulty() {
     var gameDifficulty = document.querySelector('select[name="select-difficulty"]');
     gameDifficulty.addEventListener('change', function() {
         if (gameDifficulty.options[gameDifficulty.selectedIndex].value === 'hard') {
-        cards.push('antman', 'doctorstrange', 'blackpanther');
+        cards.push('antman', 'doctorstrange', 'blackpanther', 'antman', 'doctorstrange', 'blackpanther');
         }
     }); return cards;
 }
