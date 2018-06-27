@@ -1,6 +1,6 @@
 var appNode = document.getElementById('app');
 var thanos = document.createElement('div');
-var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica wolverine antman doctorstrange blackpanther '.repeat(2).split(' ');
+var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica wolverine '.repeat(2).split(' ');
 cards.pop();
 var cardElements;
 var numberOfCards = cards.length;
@@ -12,6 +12,7 @@ var setStartTimer = new Date().getTime();
 var gameResult = 0;
 var timeResult;
 
+addExtraHeroesToChangeGameDifficulty();
 helpThanos();
 startGame();
 initResetGameControls();
@@ -145,6 +146,19 @@ function helpThanos() {
         thanosWords.classList.add('thanosGreating');
         thanosWords.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynię Ciebie bogatym i sławnym. Naciśnij "PLAY" i rozwal ich wszystkich znajdując pary tych słabełuszy!';
 }
+
+function addExtraHeroesToChangeGameDifficulty() {
+    var gameDifficulty = document.querySelector('select[name="select-difficulty"]');
+    gameDifficulty.addEventListener('change', function() {
+        if (gameDifficulty.options[gameDifficulty.selectedIndex].value === 'hard') {
+        cards.push('antman', 'doctorstrange', 'blackpanther', 'antman', 'doctorstrange', 'blackpanther');
+        } else {
+            return cards;
+        }
+    });
+}
+
+
 
 
 
