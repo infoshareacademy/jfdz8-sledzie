@@ -47,6 +47,20 @@
     background-image: url('../img/piotrek-photo.jpg');
 }
 
+
+.active--agata {
+   background: black;
+}
+
+.active--magda {
+    background: black;
+}
+
+.active--piotrek {
+    background: black;
+}
+
+
 @media (min-width: 786px) {
     .team__photo::before, .team__photo::after {
         content: "";
