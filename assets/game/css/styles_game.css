@@ -84,6 +84,21 @@ html {
     background-size: 100% auto;
     background-color: #fff;
 }
+.antman {
+    background: url("../img/antman.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.doctorstrange {
+    background: url("../img/doctorstrange.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.blackpanther {
+    background: url("../img/blackpanther.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
 .cardObverse {
     background: url("../img/shield.jpg") no-repeat;
     background-size: 60% auto;

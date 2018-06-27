@@ -1,6 +1,6 @@
 var appNode = document.getElementById('app');
 var thanos = document.createElement('div');
-var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica wolverine '.repeat(2).split(' ');
+var cards = 'hulk spiderman thor punisher flash deadpool ironman captainamerica wolverine antman doctorstrange blackpanther '.repeat(2).split(' ');
 cards.pop();
 var cardElements;
 var numberOfCards = cards.length;
