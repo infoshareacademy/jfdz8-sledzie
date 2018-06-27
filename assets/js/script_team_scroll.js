@@ -1,3 +1,5 @@
+
+var windowDistance;
 var team = document.querySelector("#team");
 var teamPhotos = document.querySelectorAll(".team__photo");
 var topDistance = team.offsetTop;
