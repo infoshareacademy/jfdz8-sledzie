@@ -151,11 +151,9 @@ function addExtraHeroesToChangeGameDifficulty() {
     var gameDifficulty = document.querySelector('select[name="select-difficulty"]');
     gameDifficulty.addEventListener('change', function() {
         if (gameDifficulty.options[gameDifficulty.selectedIndex].value === 'hard') {
-        cards.push('antman', 'doctorstrange', 'blackpanther', 'antman', 'doctorstrange', 'blackpanther');
-        } else {
-            return cards;
+        cards.push('antman', 'doctorstrange', 'blackpanther');
         }
-    });
+    }); return cards;
 }
 
 
