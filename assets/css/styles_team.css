@@ -51,8 +51,16 @@
 }
 
 
-.active__team {
+.active__team--magda {
     border: 3px solid red;
+}
+
+.active__team--agata {
+    border: 3px solid yellow;
+}
+
+.active__team--piotrek {
+    border: 3px solid green;
 }
 
 
