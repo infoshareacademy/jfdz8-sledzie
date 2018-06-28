@@ -1,16 +1,28 @@
+var photo = $(".team__photo")
+var teamSection = $(".team").offset().top;
+var windowPosition;
+var teamPosition;
 
-var windowDistance;
-var team = document.querySelector("#team");
-var teamPhotos = document.querySelectorAll(".team__photo");
-var topDistance = team.offsetTop;
-console.log(topDistance);
+$(window).on('scroll', function() {
+    windowPosition = window.pageYOffset;
+    teamPosition = teamSection;
 
-window.addEventListener("scroll", sectionAnimation);
-
-function sectionAnimation () {
-    if (windowDistance === topDistance) {
-        teamPhotos.forEach(function (element) {
-            element.classList.add("active--agata", "active--piotrek", "active--magda")
-        })
+    if(windowPosition > teamPosition) {
+        photo.addClass("active__team");
     }
-}
+    else {
+        photo.removeClass("active__team");
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
