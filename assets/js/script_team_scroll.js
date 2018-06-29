@@ -9,14 +9,15 @@ $(window).on('scroll', function() {
     teamPosition = teamSection;
 
     if(windowPosition > teamPosition) {
-        $(photo[0]).addClass("active__team--magda") &&
-        $(photo[1]).addClass("active__team--agata") &&
-        $(photo[2]).addClass("active__team--piotrek");
-    }
+        ($(photo[0]).css('backgroundImage','url(assets/img/magda_img.jpg)') &&
+        $(photo[1]).css('backgroundImage','url(assets/img/agata_img.jpg)') &&
+        $(photo[2]).css('backgroundImage','url(assets/img/piotrek_img.jpg)'))
+       }
+
     else {
-        $(photo[0]).removeClass("active__team--magda") &&
-        $(photo[1]).removeClass("active__team--agata") &&
-        $(photo[2]).removeClass("active__team--piotrek");
+        $(photo[0]).css('backgroundImage','url(assets/img/Magda.png)') &&
+        $(photo[1]).css('backgroundImage','url(assets/img/Agata.png)') &&
+        $(photo[2]).css('backgroundImage','url(assets/img/Piotrek.png)')
     }
 });
 
