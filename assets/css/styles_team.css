@@ -59,15 +59,17 @@
         -webkit-transform: translate( -50%, 100%);
         -ms-transform: translate( -50%, 100%);
         transform: translate( -50%, 100%);
-        -webkit-transition: 250ms;
+        -webkit-transition: 350ms;
         -o-transition: 350ms;
         transition: 350ms;
 
     }
 }
 
-.team__name.width::before {
-    width: 60%;
+@media (min-width: 768px) {
+    .team__name.width::before {
+        width: 60%;
+    }
 }
 
 /*@media (min-width: 768px) {*/
