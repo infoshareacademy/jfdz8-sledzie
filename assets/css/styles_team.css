@@ -94,18 +94,26 @@
 }
 
 .team__social {
-    padding-top: 10px;
-    left: 45%;
+    background-color: #ffffff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: visible;
+    margin-top: -115px;
+    height: 130px;
+    position: relative;
 }
 
 .fa-facebook-f, .fa-github {
+    display: inline-block;
     color: black;
-    font-size: 20px;
+    font-size: 60px;
     margin: 5px;
+    padding: 8px;
+    transform: translateY(50%);
 }
 
 .fa-facebook-f:active, .fa-github:active {
-    color: #ff0000;
+    color: #ff4918;
 }
 
 @media (min-width: 768px) {
@@ -118,6 +126,6 @@
 
 @media (min-width: 768px) {
     .fa-github:hover, .fa-facebook-f:hover {
-        color: red;
+        color: #ff4918;
     }
 }

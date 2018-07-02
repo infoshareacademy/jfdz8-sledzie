@@ -1,6 +1,7 @@
 var photo = Array.from($(".team__photo"));
 var teamSection = $(".team").offset().top;
 var teamMemberName = $(".team__name");
+var socialSection = $(".team__social");
 var windowPosition;
 var teamPosition;
 
@@ -25,9 +26,11 @@ $(window).on('scroll', function() {
     }
 });
 
-
-
-
+$(socialSection).hover(function() {
+    $(this).fadeTo("slow", 1);
+}, function() {
+    $(this).fadeTo("slow", 0)
+});
 
 
 
