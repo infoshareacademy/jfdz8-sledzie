@@ -33,82 +33,9 @@
     background-size: cover;
     margin: 0 auto;
     position: relative;
+    transition:  0.9s linear;
 }
 
-.team__photo.magda {
-    background-image: url('../img/magda_img.jpg');
-}
-
-.team__photo.agata {
-    background-image: url('../img/Agata.jpg');
-}
-
-.team__photo.piotrek {
-    background-image: url('../img/piotrek-photo.jpg');
-}
-
-@media (min-width: 786px) {
-    .team__photo::before, .team__photo::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 1;
-    }
-
-    .team__photo.magda::before {
-        background-image: url('../img/Magda.png');
-        z-index: 1;
-        transition: opacity 0.9s;
-        background-size: cover;
-    }
-
-    .team__photo.magda::after {
-        background-image: url('../img/magda_img.jpg');
-        background-size: cover;
-        border-radius: 50%;
-    }
-
-    .team__member:hover .team__photo.magda::before {
-        opacity: 0;
-    }
-
-    .team__photo.agata::before {
-        background-image: url('../img/Agata.png');
-        z-index: 1;
-        transition: opacity 0.9s;
-        background-size: cover;
-    }
-
-    .team__photo.agata::after {
-        background-image: url('../img/Agata.jpg');
-        background-size: cover;
-        border-radius: 50%;
-    }
-
-    .team__member:hover .team__photo.agata::before {
-        opacity: 0;
-    }
-
-    .team__photo.piotrek::before {
-        background-image: url('../img/Piotrek.png');
-        z-index: 1;
-        transition: opacity 0.9s;
-        background-size: cover;
-    }
-
-    .team__photo.piotrek::after {
-        background-image: url('../img/piotrek-photo.jpg');
-        background-size: cover;
-        border-radius: 50%;
-    }
-
-    .team__member:hover .team__photo.piotrek::before {
-        opacity: 0;
-    }
-}
 
 .team__name {
     position: relative;
@@ -117,6 +44,8 @@
     font-size: 20px;
     padding-top: 5px;
 }
+
+
 
 @media (min-width: 768px) {
     .team__name::before {
@@ -130,17 +59,24 @@
         -webkit-transform: translate( -50%, 100%);
         -ms-transform: translate( -50%, 100%);
         transform: translate( -50%, 100%);
-        -webkit-transition: 300ms;
-        -o-transition: 300ms;
-        transition: 300ms;
+        -webkit-transition: 350ms;
+        -o-transition: 350ms;
+        transition: 350ms;
+
     }
 }
 
 @media (min-width: 768px) {
-    .team__member:hover .team__name::before {
+    .team__name.width::before {
         width: 60%;
     }
 }
+
+/*@media (min-width: 768px) {*/
+    /*.team__member:hover .team__name::before {*/
+        /*width: 60%;*/
+    /*}*/
+/*}*/
 
 .team__description {
     border-top: 2px solid #000000;
@@ -158,18 +94,26 @@
 }
 
 .team__social {
-    padding-top: 10px;
-    left: 45%;
+    background-color: #ffffff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: visible;
+    margin-top: -115px;
+    height: 130px;
+    position: relative;
 }
 
 .fa-facebook-f, .fa-github {
+    display: inline-block;
     color: black;
-    font-size: 20px;
+    font-size: 60px;
     margin: 5px;
+    padding: 8px;
+    transform: translateY(50%);
 }
 
 .fa-facebook-f:active, .fa-github:active {
-    color: #ff0000;
+    color: #ff4918;
 }
 
 @media (min-width: 768px) {
@@ -182,6 +126,6 @@
 
 @media (min-width: 768px) {
     .fa-github:hover, .fa-facebook-f:hover {
-        color: red;
+        color: #ff4918;
     }
 }
