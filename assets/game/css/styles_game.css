@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+}
+html {
+    font-family: sans-serif;
+    text-align: center;
+    background: #FF0013;
+}
+#app {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.welcomeThanos {
+    position: absolute;
+    z-index: 9;
+    top: 20%;
+    left: 50%;
+    width: 25%;
+    height: 100%;
+    background: url("../img/thanos.png") no-repeat;
+    background-size: 100% auto;
+}
+.thanosGreating {
+    position: relative;
+    z-index: 9;
+    top: 10%;
+    left: -140%;
+}
+.card {
+    flex-basis: 14%;
+    height: 29vh;
+    margin: 5px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.hulk {
+    background: url("../img/hulk.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.spiderman {
+    background: url("../img/spiderman.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.thor {
+    background: url("../img/thor.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.punisher {
+    background: url("../img/punisher.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.flash {
+    background: url("../img/flash.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.deadpool {
+    background: url("../img/deadpool.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.ironman {
+    background: url("../img/ironman.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.captainamerica {
+    background: url("../img/captainamerica.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.wolverine {
+    background: url("../img/wolverine.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.antman {
+    background: url("../img/antman.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.doctorstrange {
+    background: url("../img/doctorstrange.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.blackpanther {
+    background: url("../img/blackpanther.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+}
+.cardObverse {
+    background: url("../img/shield.jpg") no-repeat;
+    background-size: 60% auto;
+    background-position: center;
+    background-color: #fff;
+}
+.outOfGame {
+    opacity: 0.5;
+}
+.eliminated {
+    background: url("../img/eliminated.png") no-repeat;
+    background-size: 80% auto;
+    flex-basis: 14%;
+    height: 30vh;
+}
+.control-panel {
+    position: absolute;
+    z-index: 10;
+    width: 40%;
+    top: 10px;
+    right: 0;
+    margin-bottom: 20px;
+}
+#play-pause-button {
+    margin-right: 30px;
+    width: 20%;
+    height: 25px;
+    background: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ff0000;
+}
+#difficulty {
+    margin-right: 30px;
+    width: 20%;
+    height: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ff0000;
+}
+#reset {
+    width: 20%;
+    height: 25px;
+    background: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ff0000;
+}
+#play-pause-button:hover, #reset:hover {
+    background: rgb(0,95,153);
+    color: #fff;
+    border: none;
+    transition: 0.5s ease-in;
+}
+@media (orientation: portrait) {
+    .cardObverse {
+        flex-basis: 30%;
+    }
+}

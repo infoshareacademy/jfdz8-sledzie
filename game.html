@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MEMORY GAME</title>
-
+    <title>Memory Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/game/css/styles_game.css">
 </head>
 <body>
-
-<div id="board">
-
+<div id="app">
+    <div class="control-panel">
+        <button id="play-pause-button">play</button>
+        <select id="difficulty" name="select-difficulty">
+            <option value="easy">easy</option>
+            <option value="hard">hard</option>
+        </select>
+        <button id="reset">reset</button>
+    </div>
 </div>
-
-
+<script src="assets/game/js/marvel_memory_game.js"></script>
 </body>
 </html>
