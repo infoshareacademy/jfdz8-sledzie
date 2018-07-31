@@ -27,7 +27,7 @@ function startGame() {
             assignHeroesClasses(cards);
             bindListenersToCards();
         } else {
-            return alert('Jeśli chcesz zagrać od nowa, naciśniej przycisk "RESET"');
+            return alert('Jeśli chcesz zagrać od nowa, kliknij przycisk "RESET"');
         }
     });
 }
@@ -133,18 +133,26 @@ function gameOver() {
 function playerResult() {
     var gameOverTime = new Date().getTime();
     var gameTime = (gameOverTime - setStartTimer) / 1000;
-    timeResult = 'Twój wynik to: ' + gameTime;
+    timeResult = 'Twój wynik to: ' + gameTime + ' sekund!' + '\n'+ 'Kliknij RESET, aby zagrać jeszcze raz.';
     console.log(timeResult);
-    alert('Czas gry ' + gameTime);
+    showPopUp();
 }
+
+function showPopUp() {
+    var popUp = document.createElement("div");
+    popUp.classList.add("popup-visible");
+    popUp.innerText = timeResult;
+    appNode.appendChild(popUp)
+}
+
 
 function helpThanos() {
         appNode.appendChild(thanos);
         thanos.classList.add('welcomeThanos');
         var thanosWords = document.createElement('div');
         thanos.appendChild(thanosWords);
-        thanosWords.classList.add('thanosGreating');
-        thanosWords.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynię Ciebie bogatym i sławnym. Naciśnij "PLAY" i rozwal ich wszystkich znajdując pary tych słabełuszy!';
+        thanosWords.classList.add('thanosGreeting');
+        thanosWords.innerHTML = 'Jestem przeokrutny i super pancerny Thanos! Jednak pomimo swojej zajebistości czasem i ja potrzebuje pomocy. Zostań moim wiernym sługą i pomóż mi zgładzić ziemskich herosów, a w zamian uczynię Ciebie bogatym i sławnym. Kliknij "PLAY" i rozwal ich wszystkich znajdując pary tych słabełuszy!';
 }
 
 function addExtraHeroesToChangeGameDifficulty() {
