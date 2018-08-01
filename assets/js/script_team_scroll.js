@@ -6,6 +6,7 @@ var windowPosition;
 var teamPosition;
 
 
+
 $(window).on("scroll", function() {
     windowPosition = window.pageYOffset;
     teamPosition = $teamSection;
