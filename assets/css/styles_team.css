@@ -118,6 +118,16 @@
     .team__social.piotrek {
         margin-top: -115px;
     }
+
+    .team__social.magda {
+        margin-top: -122px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .team__social.magda {
+        margin-top: -127px;
+    }
 }
 
 .fa-facebook-f, .fa-github {

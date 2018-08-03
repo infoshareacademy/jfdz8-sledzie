@@ -33,6 +33,52 @@ html {
     left: -140%;
 }
 
+.read-more {
+    text-transform: uppercase;
+    border: 1px solid white;
+    position: relative;
+    z-index: 9;
+    top: 110px;
+    left: -140%;
+    background: white;
+    width: 150px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.read-more:hover {
+    font-weight: bold;
+}
+
+.instruction-popup {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+}
+
+.instruction-popup-fade {
+    visibility: visible;
+    opacity: 1;
+    z-index: 12;
+    background-color: #ffffff;
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-right: 25%;
+    margin-left: 25%;
+    padding: 10px;
+}
+
+.exit-btn {
+    border: 1px solid #ffffff;
+    width: 100px;
+    display: block;
+    margin: 10px auto 0;
+    height: 25px;
+}
+
 .card {
     flex-basis: 14%;
     height: 29vh;
@@ -143,14 +189,14 @@ html {
 #reset {
     width: 20%;
     height: 25px;
-    background: #fff;
+    background: #ffffff;
     text-transform: uppercase;
     cursor: pointer;
     color: #ff0000;
 }
 #play-pause-button:hover, #reset:hover {
     background: rgb(0,95,153);
-    color: #fff;
+    color: #ffffff;
     border: none;
     transition: 0.5s ease-in;
 }
@@ -163,7 +209,7 @@ html {
 .popup-visible {
     width: 400px;
     height: 200px;
-    background: white;
+    background: #ffffff;
     border-radius: 10px;
     margin-top: -500px;
     font-family: Lato, sans-serif;
@@ -176,13 +222,13 @@ html {
 }
 
 .popup-reset-btn {
-    border: 1px solid black;
+    border: 1px solid;
     height: 25px;
     width:  60px;
     background: #fff;
     text-transform: uppercase;
     cursor: pointer;
-    color: black;
+    color: #000000;
     position: absolute;
     margin-top: 50px;
 }
