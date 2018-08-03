@@ -20,7 +20,7 @@ function startGame() {
     var playPauseButton = document.getElementById('play-pause-button');
     playPauseButton.addEventListener('click', function () {
         thanos.classList.remove('welcomeThanos');
-        thanos.innerHTML = 'Eliminuj bohaterów znajdując te same pary kart!';
+
         if (cardElements === undefined) {
             createBoard();
             shuffleCards(cards);
@@ -134,15 +134,23 @@ function playerResult() {
     var gameOverTime = new Date().getTime();
     var gameTime = (gameOverTime - setStartTimer) / 1000;
     timeResult = 'Twój wynik to: ' + gameTime + ' sekund!' + '\n'+ 'Kliknij RESET, aby zagrać jeszcze raz.';
-    console.log(timeResult);
     showPopUp();
 }
 
 function showPopUp() {
     var popUp = document.createElement("div");
     popUp.classList.add("popup-visible");
-    popUp.innerText = timeResult;
-    appNode.appendChild(popUp)
+    appNode.appendChild(popUp);
+    var resultInfo = document.createElement('p');
+    popUp.appendChild(resultInfo);
+    resultInfo.innerText = timeResult;
+    var resetPopUpBtn = document.createElement('button');
+    resetPopUpBtn.classList.add('popup-reset-btn');
+    resetPopUpBtn.innerText = 'RESET';
+    popUp.appendChild(resetPopUpBtn);
+    resetPopUpBtn.addEventListener('click', function() {
+        location.reload()
+    })
 }
 
 

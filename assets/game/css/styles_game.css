@@ -174,3 +174,15 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+.popup-reset-btn {
+    border: 1px solid black;
+    height: 25px;
+    width:  60px;
+    background: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    margin-top: 50px;
+}
