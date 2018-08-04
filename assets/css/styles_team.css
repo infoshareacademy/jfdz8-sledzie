@@ -11,7 +11,6 @@
     .team {
         min-height: 40vh;
     }
-}
 
 .team__profiles {
     display: -webkit-box;
