@@ -4,13 +4,14 @@
     box-sizing: border-box;
     background-color: #ffffff;
     padding-top: 200px;
-    height: 90vh;
+    padding-bottom: 200px;
+    min-height: 70%;
 }
 
-@media (min-width: 992px) {
-    .team {
-        min-height: 40vh;
-    }
+/*@media (min-width: 992px) {*/
+    /*.team {*/
+        /*min-height: 40vh;*/
+    /*}*/
 
 .team__profiles {
     display: -webkit-box;
@@ -22,7 +23,6 @@
     width: 90%;
     margin: 0 auto;
     padding-top: 80px;
-
 }
 
 .team__member {
