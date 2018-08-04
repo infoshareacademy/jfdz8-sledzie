@@ -1,11 +1,16 @@
 /* TEAM */
 
 .team {
+    box-sizing: border-box;
     background-color: #ffffff;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    min-height: 100vh;
+    padding-top: 200px;
+    height: 90vh;
 }
+
+@media (min-width: 992px) {
+    .team {
+        min-height: 40vh;
+    }
 
 .team__profiles {
     display: -webkit-box;
