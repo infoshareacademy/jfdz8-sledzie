@@ -4,13 +4,7 @@
     background-color: #ffffff;
     padding-top: 150px;
     padding-bottom: 150px;
-    min-height: 60vh;
-}
-
-@media (min-width: 992px) {
-    .team {
-        min-height: 40vh;
-    }
+    min-height: 100vh;
 }
 
 .team__profiles {
